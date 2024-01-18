@@ -686,6 +686,7 @@ footer.main .social a {
   display: flex;
   width: 24px;
   height: 24px;
+  text-wrap: nowrap;
 }
 
 footer.main .products-mini-slider {
@@ -752,7 +753,7 @@ footer.main .products-mini-slider .item img {
   }
 
   footer.main nav ul {
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: 150px 170px;
   }
 }
 
