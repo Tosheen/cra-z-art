@@ -554,7 +554,8 @@ header.desktop .navigation-items .nav-menu .nav-menu {
   grid-auto-flow: column;
 }
 
-.mega-menu-links-wrapper nav .menu-item-has-children:hover .nav-menu {
+.mega-menu-links-wrapper nav .menu-item-has-children:hover .nav-menu,
+.mega-menu-links-wrapper nav .menu-item-has-children.active .nav-menu {
   display: grid
 }
 
