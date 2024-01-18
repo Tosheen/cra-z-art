@@ -1,3 +1,5 @@
+const windowWidth = window.innerWidth;
+
 jQuery(document).ready(function () {
   const $mobileHeaderWrapper = jQuery("header.mobile .nav-wrapper");
   const mobileNavHeaderHeights = ["auto"];
@@ -72,16 +74,7 @@ jQuery(document).ready(function () {
   const $megaMenu = jQuery(".mega-menu");
   const $categoryTitle = jQuery("h6.category-title");
   const $meniItems = jQuery("header.desktop nav > .nav-menu > .menu-item");
-
-  jQuery("body").on("click", function (event) {
-    const $document = jQuery(this);
-
-    console.log({
-      contains: $megaMenu.contains(event.target),
-      event,
-      t: event.target.contains($megaMenu),
-    });
-  });
+  const $megaMenuNav = jQuery(".mega-menu nav");
 
   function hideMegaMenu() {
     $megaMenu.removeClass("open");
@@ -89,7 +82,7 @@ jQuery(document).ready(function () {
 
   let megaMenuTimeout = null;
 
-  function adjustLevel1MegaMenuView($selectedMenuItem) {
+  function adjustMegaMenuView($selectedMenuItem) {
     const currentCategory = $megaMenu.data("category").toLowerCase();
     const selectedItemName = $selectedMenuItem.find("> a").text().toLowerCase();
 
@@ -104,22 +97,7 @@ jQuery(document).ready(function () {
     }
   }
 
-  function adjustLevel2MegaMenuView($selectedSubMenuItem) {
-    const currentCategory = $megaMenu.data("category").toLowerCase();
-    const selectedItemName = $selectedMenuItem.find("> a").text().toLowerCase();
-
-    const $subMenuFirstLevel = $selectedMenuItem.find("> .nav-menu").clone();
-
-    if (selectedItemName != currentCategory) {
-      $megaMenu
-        .data("category", selectedItemName)
-        .attr("data-category", selectedItemName);
-      $megaMenu.find("nav > .sub-menu").remove();
-      $megaMenu.find("nav").prepend($subMenuFirstLevel);
-    }
-  }
-
-  if (matchMedia("(pointer:fine)").matches) {
+  if (matchMedia("(pointer:fine)").matches === true) {
     $meniItems
       .on("mouseenter", function () {
         clearTimeout(megaMenuTimeout);
@@ -129,7 +107,7 @@ jQuery(document).ready(function () {
             $megaMenu.addClass("open");
           }
 
-          adjustLevel1MegaMenuView($item);
+          adjustMegaMenuView($item);
         } else {
           $megaMenu.removeClass("open");
         }
@@ -149,5 +127,77 @@ jQuery(document).ready(function () {
         megaMenuTimeout = setTimeout(hideMegaMenu, 500);
       });
   } else {
+    $meniItems.on("click", function (event) {
+      const $item = jQuery(this);
+
+      if ($item.hasClass("menu-item-has-children")) {
+        if ($megaMenu.hasClass("open") === false) {
+          $megaMenu.addClass("open");
+          adjustMegaMenuView($item);
+        } else {
+          $megaMenu.removeClass("open");
+        }
+      } else {
+        $megaMenu.removeClass("open");
+      }
+
+      event.stopPropagation();
+      event.preventDefault();
+    });
+
+    $megaMenuNav.on("click", "> .nav-menu > .menu-item", function (event) {
+      const $item = jQuery(this);
+      $item.siblings().removeClass("active").end().toggleClass("active");
+    });
+
+    jQuery("html, body").on("click", function (event) {
+      if ($megaMenu[0].contains(event.target) === false) {
+        $megaMenu.removeClass("open");
+      }
+    });
   }
+
+  const $productsMiniSlider = jQuery("#products-mini-slider");
+
+  function getMiniSlidesToShow() {
+    return window.innerWidth != null ? Math.round(window.innerWidth / 300) : 1;
+  }
+
+  if ($productsMiniSlider.length > 0) {
+    $productsMiniSlider.slick({
+      infinite: true,
+      mobileFirst: true,
+      slidesToShow: getMiniSlidesToShow(),
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: "50px",
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 6000,
+    });
+  }
+
+  function debounce(callback, delay) {
+    let timeoutID = undefined;
+
+    return function (...args) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(() => callback(...args), delay);
+    };
+  }
+
+  const debouncedMiniProductsUpdater = debounce(function (...args) {
+    if ($productsMiniSlider.length > 0) {
+      $productsMiniSlider.slick(
+        "slickSetOption",
+        "slidesToShow",
+        getMiniSlidesToShow(),
+        true
+      );
+    }
+  }, 1000);
+
+  jQuery(window).on("resize", function () {
+    debouncedMiniProductsUpdater();
+  });
 });
