@@ -13,6 +13,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 :root {
@@ -21,6 +22,7 @@ body {
   --charcoal: #111;
   --dark-grey: #6c6c6c;
   --shadow-sm: rgba(0, 0, 0, 0.12);
+  --red: #dd1117;
 }
 
 .container {
@@ -29,11 +31,6 @@ body {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.site-wrapper {
-  overflow-x: hidden;
-  height: 300vh;
 }
 
 /*-----------------------
@@ -388,7 +385,7 @@ header.desktop .search-products {
   padding: 28px 56px 40px 56px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04) inset,
     88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
-    display: none;
+  display: none;
 }
 
 .mega-menu.open {
@@ -556,7 +553,7 @@ header.desktop .navigation-items .nav-menu .nav-menu {
 
 .mega-menu-links-wrapper nav .menu-item-has-children:hover .nav-menu,
 .mega-menu-links-wrapper nav .menu-item-has-children.active .nav-menu {
-  display: grid
+  display: grid;
 }
 
 @media screen and (min-width: 1025px) {
@@ -581,6 +578,181 @@ header.desktop .navigation-items .nav-menu .nav-menu {
 
   header.desktop .logo {
     width: 224px;
+  }
+}
+
+/*-----------------------
+    Footer
+-----------------------*/
+footer.main {
+  background-color: var(--red);
+  padding: 60px 0 100px 0;
+  color: var(--white);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-image: url("../images/footer-mobile-bckg.png");
+}
+
+footer.main h5 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 30px;
+}
+
+footer.main .logo {
+  display: block;
+  width: 105px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+footer.main .info > * + * {
+  margin-top: 40px;
+}
+
+footer.main .subscribe {
+  max-width: 325px;
+}
+
+footer.main .subscribe p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+footer.main .subscribe input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--white);
+  border-radius: 40px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  border: none;
+}
+
+footer.main nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 20px);
+  grid-auto-flow: column;
+  gap: 12px 20px;
+}
+
+footer.main nav a {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+footer.main nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 300ms ease;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+footer.main nav a:hover::after {
+  transform: scaleX(1);
+}
+
+footer.main .copyright {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.42;
+  margin-top: 40px;
+}
+
+footer.main .social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+footer.main .social a {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+footer.main .products-mini-slider {
+  margin-bottom: 40px;
+}
+
+footer.main .products-mini-slider .item {
+  aspect-ratio: 1 / 1;
+  padding: 0 12px;
+}
+
+footer.main .products-mini-slider .item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+footer.main .products-mini-slider .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (min-width: 1025px) {
+  footer.main {
+    background-image: url("../images/footer-desktop-bckg.png"),
+      url("../images/rainbow.png");
+    background-position: center bottom -20px, right top;
+    background-size: 100% auto, auto auto;
+  }
+
+  footer.main h5 {
+    text-align: left;
+    font-size: 2.75rem;
+    margin-bottom: 50px;
+  }
+
+  footer.main .logo {
+    width: 175px;
+  }
+
+  footer.main .products-mini-slider {
+    margin-bottom: 60px;
+  }
+
+  footer.main .copyright {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  footer.main .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer.main .info > * + * {
+    margin-top: 0;
+  }
+
+  footer.main nav ul {
+    grid-template-columns: repeat(2, 150px);
   }
 }
 

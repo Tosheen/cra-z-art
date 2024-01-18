@@ -1,3 +1,5 @@
+const windowWidth = window.innerWidth;
+
 jQuery(document).ready(function () {
   const $mobileHeaderWrapper = jQuery("header.mobile .nav-wrapper");
   const mobileNavHeaderHeights = ["auto"];
@@ -154,4 +156,48 @@ jQuery(document).ready(function () {
       }
     });
   }
+
+  const $productsMiniSlider = jQuery("#products-mini-slider");
+
+  function getMiniSlidesToShow() {
+    return window.innerWidth != null ? Math.round(window.innerWidth / 300) : 1;
+  }
+
+  if ($productsMiniSlider.length > 0) {
+    $productsMiniSlider.slick({
+      infinite: true,
+      mobileFirst: true,
+      slidesToShow: getMiniSlidesToShow(),
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: "50px",
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 6000,
+    });
+  }
+
+  function debounce(callback, delay) {
+    let timeoutID = undefined;
+
+    return function (...args) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(() => callback(...args), delay);
+    };
+  }
+
+  const debouncedMiniProductsUpdater = debounce(function (...args) {
+    if ($productsMiniSlider.length > 0) {
+      $productsMiniSlider.slick(
+        "slickSetOption",
+        "slidesToShow",
+        getMiniSlidesToShow(),
+        true
+      );
+    }
+  }, 1000);
+
+  jQuery(window).on("resize", function () {
+    debouncedMiniProductsUpdater();
+  });
 });
