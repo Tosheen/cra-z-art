@@ -73,7 +73,7 @@ jQuery(document).ready(function () {
 
   const $megaMenu = jQuery(".mega-menu");
   const $categoryTitle = jQuery("h6.category-title");
-  const $meniItems = jQuery("header.desktop nav > .nav-menu > .menu-item");
+  const $menuItems = jQuery("header.desktop nav > .nav-menu > .menu-item");
   const $megaMenuNav = jQuery(".mega-menu nav");
 
   function hideMegaMenu() {
@@ -88,17 +88,31 @@ jQuery(document).ready(function () {
 
     const $subMenuFirstLevel = $selectedMenuItem.find("> .nav-menu").clone();
 
+    const hasSubmenuNestedLevel =
+      $selectedMenuItem.find(".nav-menu .nav-menu").length > 0;
+
     if (selectedItemName != currentCategory) {
       $megaMenu
         .data("category", selectedItemName)
         .attr("data-category", selectedItemName);
       $megaMenu.find("nav > .nav-menu").remove();
       $megaMenu.find("nav").prepend($subMenuFirstLevel);
+      $categoryTitle.text(
+        selectedItemName === "shop" ? "Shop by" : selectedItemName
+      );
+
+      if (hasSubmenuNestedLevel) {
+        $megaMenu.find("nav").addClass("sub-levels");
+      } else {
+        $megaMenu.find("nav").removeClass("sub-levels");
+      }
     }
   }
 
+  let showBestSellers = false;
+
   if (matchMedia("(pointer:fine)").matches === true) {
-    $meniItems
+    $menuItems
       .on("mouseenter", function () {
         clearTimeout(megaMenuTimeout);
         const $item = jQuery(this);
@@ -126,8 +140,34 @@ jQuery(document).ready(function () {
       .on("mouseleave", function () {
         megaMenuTimeout = setTimeout(hideMegaMenu, 500);
       });
+
+    $megaMenuNav.on("mouseenter", "> .nav-menu > .menu-item", function (event) {
+      const $item = jQuery(this);
+      if ($item.find("> a").text().toLowerCase() === "category") {
+        showBestSellers = true;
+      } else {
+        showBestSellers = false;
+      }
+
+      if ($megaMenuNav.hasClass("sub-levels")) {
+        $item.siblings().removeClass("active").end().toggleClass("active");
+      }
+    });
+
+    $megaMenuNav.on("mouseenter", ".menu-item .menu-item a", function (event) {
+      const $item = jQuery(this);
+
+      if ($megaMenuNav.hasClass("sub-levels") && showBestSellers) {
+        const slugifiedCategory = slugify($item.text());
+
+        jQuery(".best-seller-category")
+          .removeClass("show")
+          .filter(`[data-category="${slugifiedCategory}"]`)
+          .addClass("show");
+      }
+    });
   } else {
-    $meniItems.on("click", function (event) {
+    $menuItems.on("click", function (event) {
       const $item = jQuery(this);
 
       if ($item.hasClass("menu-item-has-children")) {
@@ -155,6 +195,14 @@ jQuery(document).ready(function () {
         $megaMenu.removeClass("open");
       }
     });
+  }
+
+  function slugify(str) {
+    return str
+      .toLowerCase()
+      .replaceAll("&", "and")
+      .replaceAll(" ", "-")
+      .replaceAll(",", "-");
   }
 
   const $productsMiniSlider = jQuery("#products-mini-slider");
