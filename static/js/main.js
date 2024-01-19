@@ -147,6 +147,7 @@ jQuery(document).ready(function () {
         showBestSellers = true;
       } else {
         showBestSellers = false;
+        jQuery(".best-seller-category").removeClass("show");
       }
 
       if ($megaMenuNav.hasClass("sub-levels")) {
