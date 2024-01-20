@@ -233,8 +233,8 @@ jQuery(document).ready(function () {
       dots: true,
       dotsClass: "compact-dots",
       centerMode: true,
-      centerPadding: "16px",
-      infinite: false,
+      centerPadding: isTabletOrBigger() ? "15vw" : "16px",
+      infinite: isTabletOrBigger() ? true : false,
     });
   }
 
@@ -257,6 +257,10 @@ jQuery(document).ready(function () {
       );
     }
   }, 1000);
+
+  function isTabletOrBigger() {
+    return windowWidth >= 1025;
+  }
 
   jQuery(window).on("resize", function () {
     debouncedMiniProductsUpdater();
