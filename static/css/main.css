@@ -1435,6 +1435,11 @@ p {
   position: relative;
   align-items: center;
   text-align: left;
+  transition: transform 400ms ease;
+}
+
+.quick-buy:hover {
+  transform: translateY(-10px);
 }
 
 .quick-buy::after {
