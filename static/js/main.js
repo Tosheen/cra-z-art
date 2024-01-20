@@ -224,6 +224,20 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $roseArtProducts = jQuery("#rose-art-products");
+
+  if ($roseArtProducts.length === 1) {
+    $roseArtProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "16px",
+      infinite: false,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
