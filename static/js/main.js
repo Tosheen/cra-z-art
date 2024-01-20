@@ -126,6 +126,22 @@ jQuery(document).ready(function () {
       .on("mouseleave", function () {
         megaMenuTimeout = setTimeout(hideMegaMenu, 500);
       });
+<<<<<<< Updated upstream
+=======
+
+    $megaMenuNav.on("mouseenter", "> .nav-menu > .menu-item", function (event) {
+      const $item = jQuery(this);
+      if ($item.find("> a").text().toLowerCase() === "category") {
+        jQuery(".best-seller-category").addClass("show");
+      } else {
+        jQuery(".best-seller-category").removeClass("show");
+      }
+
+      if ($megaMenuNav.hasClass("sub-levels")) {
+        $item.siblings().removeClass("active").end().toggleClass("active");
+      }
+    });
+>>>>>>> Stashed changes
   } else {
     $meniItems.on("click", function (event) {
       const $item = jQuery(this);
@@ -174,6 +190,16 @@ jQuery(document).ready(function () {
       arrows: false,
       autoplay: true,
       autoplaySpeed: 6000,
+    });
+  }
+
+  const $hero = jQuery("#hero");
+
+  if ($hero.length === 1) {
+    $hero.slick({
+      autoplay: true,
+      autoplaySpeed: 8000,
+      arrows: true,
     });
   }
 
