@@ -130,6 +130,8 @@ header.mobile nav {
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 300ms ease, transform 300ms ease;
+  padding-bottom: 20px;
+  z-index: 50;
 }
 
 header.mobile.navigation-open nav {
@@ -202,7 +204,7 @@ header.mobile .sub-menu .menu-item a {
   font-weight: 400;
 }
 
-header.mobile .menu-item::after {
+header.mobile .menu-item-has-children::after {
   content: "";
   display: block;
   width: 24px;
