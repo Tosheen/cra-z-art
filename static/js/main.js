@@ -175,9 +175,13 @@ jQuery(document).ready(function () {
       $item.siblings().removeClass("active").end().toggleClass("active");
     });
 
+    $megaMenuNav.on("click", "> .nav-menu > .menu-item > a", function (event) {
+      event.preventDefault();
+    });
+
     jQuery("html, body").on("click", function (event) {
       if ($megaMenu[0].contains(event.target) === false) {
-        $megaMenu.removeClass("open");
+        hideMegaMenu();
       }
     });
   }

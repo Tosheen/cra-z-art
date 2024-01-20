@@ -304,7 +304,7 @@ header.desktop {
 
 header.desktop .top-nav {
   height: 148px;
-  padding-top: 24px;
+  padding-top: 60px;
 }
 
 header.desktop .navigation-items .nav-menu {
@@ -575,10 +575,6 @@ header .best-selllers .items {
   color: var(--charcoal);
 }
 
-.best-seller-item:hover .info h6 {
-  color: var(--green);
-}
-
 header.desktop .navigation-items .nav-menu .nav-menu {
   display: none;
 }
@@ -621,6 +617,10 @@ header.desktop .navigation-items .nav-menu .nav-menu {
 @media screen and (min-width: 1400px) {
   header.desktop .navigation-items {
     gap: 80px;
+  }
+
+  header.desktop .top-nav {
+    padding-top: 24px;
   }
 
   header.desktop .navigation-items .nav-menu {
@@ -910,26 +910,32 @@ p {
 .hero .shop-now-wrapper {
   max-width: 325px;
   min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero .slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  display: none;
+  display: none !important;
 }
 
 .hero .slick-arrow.slick-prev {
-  left: 56px;
+  left: 10px;
 }
 
 .hero .slick-arrow.slick-next {
-  right: 56px;
+  right: 10px;
 }
 
 @media screen and (min-width: 1025px) {
   .hero .slick-arrow {
-    display: block;
+    display: block !important;
+  }
+
+  .hero .container {
+    max-width: 1200px;
   }
 
   .hero .hero-slide > img:nth-child(1) {
@@ -942,6 +948,7 @@ p {
 
   .hero .shop-now-wrapper {
     max-width: 200px;
+    margin: 0;
   }
 
   .hero .info {
@@ -986,6 +993,16 @@ p {
 
   .hero .hero-slide {
     padding-top: 10vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero .slick-arrow.slick-prev {
+    left: 56px;
+  }
+  
+  .hero .slick-arrow.slick-next {
+    right: 56px;
   }
 }
 
