@@ -1000,7 +1000,7 @@ p {
   .hero .slick-arrow.slick-prev {
     left: 56px;
   }
-  
+
   .hero .slick-arrow.slick-next {
     right: 56px;
   }
@@ -1089,6 +1089,87 @@ p {
 }
 
 /*-----------------------
+    Our top brands
+-----------------------*/
+.our-top-brands {
+  padding: 70px 0;
+  background: var(--light-blue) url("../images/brands/bckg.jpg") no-repeat
+    center top / cover;
+  text-align: center;
+}
+
+.our-top-brands h3 {
+  margin-bottom: 48px;
+}
+
+.our-top-brands .brands {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.our-top-brands .brands a {
+  display: block;
+  width: 100%;
+}
+
+.our-top-brands .brands img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.our-top-brands .brands .see-all {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  color: var(--green);
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.our-top-brands .button {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .our-top-brands {
+    padding: 100px 0;
+  }
+
+  .our-top-brands h3 {
+    margin-bottom: 46px;
+  }
+
+  .our-top-brands .brands {
+    grid-template-columns: repeat(5, 180px);
+    max-width: 980px;
+    margin-bottom: 40px;
+  }
+
+  .our-top-brands .brands > div:nth-child(6) {
+    display: none;
+  }
+
+  .our-top-brands .brands .see-all {
+    display: none;
+  }
+
+  .our-top-brands .button {
+    display: inline-flex;
+  }
+}
+
+/*-----------------------
     Buttons
 -----------------------*/
 .button {
@@ -1114,6 +1195,17 @@ p {
 .button.primary:active {
   background-color: var(--green);
   color: var(--white);
+}
+
+.button.secondary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.button.secondary:hover,
+.button.secondary:active {
+  background-color: var(--white);
+  color: var(--green);
 }
 
 .button.full-width {
