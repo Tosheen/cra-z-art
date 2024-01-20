@@ -18,9 +18,12 @@ body {
 
 :root {
   --green: #008934;
+  --black: #000;
   --white: #ffffff;
   --charcoal: #111;
   --dark-grey: #6c6c6c;
+  --neutral-grey: #3a3a3a;
+  --grey: #eaeaea;
   --light-grey: #f3f4f6;
   --shadow-sm: rgba(0, 0, 0, 0.12);
   --red: #dd1117;
@@ -409,9 +412,10 @@ header.desktop .search-products {
 .mega-menu .category-title {
   color: var(--charcoal);
   font-size: 2rem;
+  line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.64px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .mega-menu .category-title::first-letter {
@@ -1000,7 +1004,7 @@ p {
   .hero .slick-arrow.slick-prev {
     left: 56px;
   }
-  
+
   .hero .slick-arrow.slick-next {
     right: 56px;
   }
@@ -1089,6 +1093,251 @@ p {
 }
 
 /*-----------------------
+    Our top brands
+-----------------------*/
+.our-top-brands {
+  padding: 70px 0;
+  background: var(--light-blue) url("../images/brands/bckg.jpg") no-repeat
+    center top / cover;
+  text-align: center;
+}
+
+.our-top-brands h3 {
+  margin-bottom: 48px;
+}
+
+.our-top-brands .brands {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.our-top-brands .brands a {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 500ms ease, box-shadow 500ms ease;
+}
+
+.our-top-brands .brands a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+.our-top-brands .brands img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.our-top-brands .brands .see-all {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--white);
+  color: var(--green);
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  line-height: 1.4;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.our-top-brands .button {
+  display: none;
+}
+
+@media screen and (min-width: 1025px) {
+  .our-top-brands {
+    padding: 100px 0;
+  }
+
+  .our-top-brands h3 {
+    margin-bottom: 46px;
+  }
+
+  .our-top-brands .brands {
+    grid-template-columns: repeat(5, 180px);
+    max-width: 980px;
+    margin-bottom: 40px;
+  }
+
+  .our-top-brands .brands > div:nth-child(6) {
+    display: none;
+  }
+
+  .our-top-brands .brands .see-all {
+    display: none;
+  }
+
+  .our-top-brands .button {
+    display: inline-flex;
+  }
+}
+
+/*-----------------------
+    Rose Art Brand
+-----------------------*/
+.rose-art-brand {
+  padding: 190px 0 140px 0;
+  color: var(--white);
+  text-align: center;
+  background: var(--charcoal);
+  background-image: url("../images/rose-art/decoration-left.png"),
+    url("../images/rose-art/decoration-right.png");
+  background-repeat: no-repeat;
+  background-size: 180px auto, 136px auto;
+  background-position: left top, right top;
+}
+
+.rose-art-brand .info {
+  margin-bottom: 40px;
+}
+
+.rose-art-brand .info img {
+  display: inline-block;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 26px;
+}
+
+.rose-art-brand h2 {
+  margin-bottom: 16px;
+}
+
+.rose-art-products {
+  margin-bottom: 0 !important;
+}
+
+.rose-art-products .product {
+  position: relative;
+  height: 400px;
+  padding: 0 8px;
+
+  overflow: hidden;
+}
+
+.rose-art-products .product > img {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  width: calc(100% - 16px);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.rose-art-products .quick-buy-wrapper {
+  position: absolute;
+  z-index: 10;
+  width: 310px;
+  max-width: 100%;
+  left: 50%;
+  bottom: 44px;
+  transform: translateX(-50%);
+}
+
+.rose-art-products .quick-buy-wrapper .dot-pulser {
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--white);
+  left: 50%;
+  top: 100%;
+  transform: scale(0.95) translate(-50%, 16px);
+  animation: pulse 2s ease infinite 200ms;
+}
+
+.rose-art-products .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.rose-art-products .slick-prev {
+  left: 20px;
+}
+
+.rose-art-products .slick-next {
+  right: 20px;
+}
+
+.rose-art-products .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+@media screen and (min-width: 1025px) {
+  .rose-art-brand {
+    padding: 98px 0 162px 0;
+    background-size: 544px auto, 420px auto;
+  }
+
+  .rose-art-brand h2 {
+    font-size: 2.75rem;
+  }
+
+  .rose-art-brand .info {
+    max-width: 630px;
+    margin: 0 auto 62px auto;
+  }
+
+  .rose-art-brand .info img {
+    max-width: 200px;
+  }
+
+  .rose-art-products .product {
+    height: 520px;
+  }
+
+  .rose-art-products .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .rose-art-products .quick-buy-wrapper {
+    left: 200px;
+    transform: none;
+  }
+
+  .rose-art-products .compact-dots {
+    top: calc(100% + 40px);
+  }
+}
+
+/*-----------------------
+    Animations
+-----------------------*/
+@keyframes pulse {
+  0% {
+    transform: scale(0.95) translate(-50%, 16px);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+  }
+  70% {
+    transform: scale(1) translate(-50%, 16px);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95) translate(-50%, 16px);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/*-----------------------
     Buttons
 -----------------------*/
 .button {
@@ -1114,6 +1363,17 @@ p {
 .button.primary:active {
   background-color: var(--green);
   color: var(--white);
+}
+
+.button.secondary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.button.secondary:hover,
+.button.secondary:active {
+  background-color: var(--white);
+  color: var(--green);
 }
 
 .button.full-width {
@@ -1161,10 +1421,105 @@ p {
   background-color: var(--green);
 }
 
+.quick-buy {
+  display: flex;
+  color: var(--charcoal);
+  padding: 16px 40px 16px 16px;
+  background-color: var(--white);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  gap: 16px;
+  width: 100%;
+  max-width: 310px;
+  position: relative;
+  align-items: center;
+  text-align: left;
+  transition: transform 400ms ease;
+}
+
+.quick-buy:hover {
+  transform: translateY(-10px);
+}
+
+.quick-buy::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 32px;
+  border-left: 1px solid var(--grey);
+  background: url("../images/icons/chevron-right.svg") no-repeat center center /
+    16px 16px;
+}
+
+.quick-buy .product-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.quick-buy .product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.quick-buy .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+.quick-buy .product-info h5 {
+  font-weight: 700;
+}
+
+.quick-buy .product-info .price {
+  display: block;
+}
+
+.compact-dots {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.compact-dots li {
+  display: block;
+  width: 30px;
+  height: 4px;
+}
+
+.compact-dots button {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--neutral-grey);
+  cursor: pointer;
+}
+
+.compact-dots li.slick-active button {
+  background-color: var(--white);
+}
+
 @media screen and (min-width: 768px) {
   .slick-arrow {
     width: 52px;
     height: 52px;
+  }
+
+  .compact-dots li {
+    width: 70px;
   }
 }
 

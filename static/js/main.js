@@ -224,6 +224,20 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $roseArtProducts = jQuery("#rose-art-products");
+
+  if ($roseArtProducts.length === 1) {
+    $roseArtProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "16px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
@@ -243,6 +257,10 @@ jQuery(document).ready(function () {
       );
     }
   }, 1000);
+
+  function isTabletOrBigger() {
+    return windowWidth >= 1025;
+  }
 
   jQuery(window).on("resize", function () {
     debouncedMiniProductsUpdater();
