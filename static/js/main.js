@@ -126,8 +126,6 @@ jQuery(document).ready(function () {
       .on("mouseleave", function () {
         megaMenuTimeout = setTimeout(hideMegaMenu, 500);
       });
-<<<<<<< Updated upstream
-=======
 
     $megaMenuNav.on("mouseenter", "> .nav-menu > .menu-item", function (event) {
       const $item = jQuery(this);
@@ -141,7 +139,6 @@ jQuery(document).ready(function () {
         $item.siblings().removeClass("active").end().toggleClass("active");
       }
     });
->>>>>>> Stashed changes
   } else {
     $meniItems.on("click", function (event) {
       const $item = jQuery(this);
