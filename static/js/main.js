@@ -238,6 +238,21 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $communityReviews = jQuery("#community-reviews");
+
+  if ($communityReviews.length === 1 && isMobile()) {
+    $communityReviews.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "16px",
+      infinite: false,
+      adaptiveHeight: true,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
@@ -257,6 +272,10 @@ jQuery(document).ready(function () {
       );
     }
   }, 1000);
+
+  function isMobile() {
+    return windowWidth < 768;
+  }
 
   function isTabletOrBigger() {
     return windowWidth >= 1025;

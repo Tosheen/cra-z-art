@@ -1320,6 +1320,137 @@ p {
 }
 
 /*-----------------------
+    Our Community
+-----------------------*/
+.our-community {
+  padding: 160px 0 192px 0;
+  background-color: var(--light-blue);
+  background-image: url("../images/our-community/crayons.png"),
+    url("../images/our-community/bckg.png");
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto auto, cover;
+  background-position: left bottom, center center;
+}
+
+.our-community h3 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.our-community .reviews-wrapper {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.community-reviews .review-item {
+  padding: 0 8px;
+}
+
+.community-reviews .product {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+}
+
+.community-reviews .product .image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.community-reviews .product .image img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.community-reviews .product .info {
+  padding: 24px;
+}
+
+.community-reviews .product .info > * + * {
+  margin-top: 20px;
+}
+
+.community-reviews .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.community-reviews .slick-prev {
+  left: 20px;
+}
+
+.community-reviews .slick-next {
+  right: 20px;
+}
+
+.community-reviews .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.community-reviews .product .button {
+  min-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .our-community .reviews-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .community-reviews .review-item {
+    padding: 0;
+  }
+
+  .community-reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .community-reviews .product .button {
+    min-width: 200px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .our-community {
+    padding: 120px 0 300px 0; 
+  }
+
+  .our-community  h3 {
+    margin-bottom: 80px;
+  }
+
+  .community-reviews .product .info {
+    padding: 32px;
+  }
+
+  .community-reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .community-reviews .review-item:nth-child(2) {
+    transform: translateY(110px);
+  }
+}
+
+/*-----------------------
     Animations
 -----------------------*/
 @keyframes pulse {
@@ -1349,9 +1480,12 @@ p {
   text-transform: uppercase;
   border-radius: 64px;
   padding: 16px 32px;
-  transition: color 300ms ease, background-color 300ms ease;
+  transition: color 300ms ease, background-color 300ms ease,
+    border-color 300ms ease;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
 }
 
 .button.primary {
@@ -1374,6 +1508,18 @@ p {
 .button.secondary:active {
   background-color: var(--white);
   color: var(--green);
+}
+
+.button.tertiary {
+  background: var(--white);
+  color: var(--green);
+  border: 1px solid var(--grey);
+  border-radius: 64px;
+}
+
+.button.tertiary:hover,
+.button.tertiary:active {
+  border-color: var(--green);
 }
 
 .button.full-width {
@@ -1504,7 +1650,7 @@ p {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: var(--neutral-grey);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
