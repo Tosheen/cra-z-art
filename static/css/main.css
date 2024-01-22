@@ -1238,8 +1238,8 @@ p {
 .rose-art-products .quick-buy-wrapper {
   position: absolute;
   z-index: 10;
-  width: 310px;
-  max-width: 100%;
+  width: calc(100% - 20px);
+  max-width: 320px;
   left: 50%;
   bottom: 44px;
   transform: translateX(-50%);
@@ -1430,10 +1430,10 @@ p {
 
 @media screen and (min-width: 1025px) {
   .our-community {
-    padding: 120px 0 300px 0; 
+    padding: 120px 0 300px 0;
   }
 
-  .our-community  h3 {
+  .our-community h3 {
     margin-bottom: 80px;
   }
 
@@ -1447,6 +1447,134 @@ p {
 
   .community-reviews .review-item:nth-child(2) {
     transform: translateY(110px);
+  }
+}
+
+/*-----------------------
+    Our Best Sellers
+-----------------------*/
+.our-best-sellers {
+  padding: 100px 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto, cover;
+  background-position: left bottom, left top;
+  background-image: url("../images/best-sellers/bckg.png"),
+    linear-gradient(180deg, #3acfff 0%, #beefff 100%);
+}
+
+.our-best-sellers h3 {
+  margin-bottom: 40px;
+}
+
+.best-seller-products .product {
+  border-radius: 16px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  background-color: var(--white);
+  overflow: hidden;
+  text-align: center;
+  margin: 0 8px;
+}
+
+.best-seller-products .img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.best-seller-products .img-wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.best-seller-products .info {
+  padding: 32px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.best-seller-products .info > * + * {
+  margin-top: 8px;
+}
+
+.best-seller-products .info h6 {
+  font-weight: 400;
+}
+
+.best-seller-products .info .brand,
+.best-seller-products .info .price {
+  font-weight: 700;
+}
+
+.best-seller-products .product .button {
+  margin-top: 32px;
+  min-width: 100%;
+}
+
+.best-seller-products .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.best-seller-products .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.best-seller-products .slick-prev {
+  left: 20px;
+}
+
+.best-seller-products .slick-next {
+  right: 20px;
+}
+
+.our-best-sellers .shop-all {
+  margin-top: 112px;
+}
+
+@media screen and (min-width: 1025px) {
+  .our-best-sellers {
+    padding: 120px 0;
+  }
+
+  .our-best-sellers h3 {
+    margin-bottom: 60px;
+  }
+
+  .best-seller-products .compact-dots {
+    display: none;
+  }
+
+  .best-seller-products .slick-prev {
+    left: auto;
+    right: 124px;
+    top: auto;
+    bottom: calc(100% + 60px);
+  }
+  
+  
+  .best-seller-products .slick-next {
+    right: 56px;
+    top: auto;
+    bottom: calc(100% + 60px);
+  }
+
+  .our-best-sellers .shop-all {
+    margin: 40px auto 0 auto;
+    max-width: 240px;
   }
 }
 
@@ -1538,6 +1666,7 @@ p {
   background-repeat: no-repeat;
   background-size: 16px 16px;
   position: relative;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
 }
 
 .slick-prev:before,
@@ -1639,7 +1768,7 @@ p {
 
 .compact-dots li {
   display: block;
-  width: 30px;
+  width: 26px;
   height: 4px;
 }
 
