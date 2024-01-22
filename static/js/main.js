@@ -287,6 +287,7 @@ jQuery(document).ready(function () {
           breakpoint: 480,
           settings: {
             slidesToShow: 2,
+            initialSlide: 0,
           },
         },
         {
@@ -294,6 +295,7 @@ jQuery(document).ready(function () {
           settings: {
             slidesToShow: 3,
             dots: false,
+            initialSlide: 1,
           },
         },
         {

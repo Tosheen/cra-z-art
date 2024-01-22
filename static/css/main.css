@@ -1777,7 +1777,8 @@ p {
 
 @media screen and (min-width: 768px) {
   .on-the-blog {
-    background-image: url("../images/on-the-blog/bckg-01.png"), url("../images/on-the-blog/bckg-02.png");
+    background-image: url("../images/on-the-blog/bckg-01.png"),
+      url("../images/on-the-blog/bckg-02.png");
     background-size: auto;
     background-position: left 125px bottom, right 125px bottom;
   }
@@ -1800,7 +1801,7 @@ p {
     width: 200px;
     margin-top: 0;
   }
-  
+
   .on-the-blog .visit:only-child {
     display: none;
   }
@@ -1815,6 +1816,57 @@ p {
 @media screen and (min-width: 1025px) {
   .blog-items {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*-----------------------
+    Our Story
+-----------------------*/
+.our-story {
+  padding: 100px 0 320px 0;
+  background-color: var(--light-blue);
+  background-image: url("../images/our-story/decor-01-sm.png"),
+    url("../images/our-story/decor-02-sm.png"),
+    url("../images/our-story/bckg-sm.png");
+  background-repeat: no-repeat;
+  background-size: auto, auto, cover;
+  background-position: right bottom, left bottom, center center;
+  color: var(--white);
+  text-align: center;
+}
+
+.our-story h2 {
+  margin-bottom: 16px;
+}
+
+.our-story p {
+  margin-bottom: 32px;
+}
+
+.our-story .button {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .our-story {
+    padding: 114px 0;
+    background-image: url("../images/our-story/decor-01-lg.png"),
+      url("../images/our-story/decor-02-lg.png"),
+      url("../images/our-story/bckg-lg.png");
+    background-repeat: no-repeat;
+    background-size: auto, auto, cover;
+    background-position: right bottom, left bottom, center center;
+  }
+
+  .our-story p {
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .our-story .button {
+    max-width: 200px;
   }
 }
 
@@ -1854,6 +1906,8 @@ p {
   align-items: center;
   border: none;
   cursor: pointer;
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.08),
+    44px 44px 64px 0px rgba(0, 0, 0, 0.04);
 }
 
 .button.primary {
