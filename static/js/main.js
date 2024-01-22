@@ -289,6 +289,22 @@ jQuery(document).ready(function () {
             initialSlide: 2,
           },
         },
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 5,
+            dots: false,
+            initialSlide: 3,
+          },
+        },
+        {
+          breakpoint: 2200,
+          settings: {
+            slidesToShow: 6,
+            dots: false,
+            initialSlide: 4,
+          },
+        },
       ],
     });
   }

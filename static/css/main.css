@@ -29,6 +29,7 @@ body {
   --red: #dd1117;
   --light-blue: #00a1df;
   --purple: #982d88;
+  --yellow: #ffeb00;
 }
 
 .container {
@@ -1564,8 +1565,7 @@ p {
     top: auto;
     bottom: calc(100% + 60px);
   }
-  
-  
+
   .best-seller-products .slick-next {
     right: 56px;
     top: auto;
@@ -1575,6 +1575,78 @@ p {
   .our-best-sellers .shop-all {
     margin: 40px auto 0 auto;
     max-width: 240px;
+  }
+}
+
+/*-----------------------
+    Popular by age
+-----------------------*/
+.popular-by-age {
+  padding: 75px 0 135px 0;
+  background-color: var(--yellow);
+  background-image: url("../images/popular-by-age/bckg.png");
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+  background-position: bottom center;
+}
+
+.popular-by-age h3 {
+  margin-bottom: 56px;
+}
+
+.age-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.age-products .product {
+  border-radius: 16px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 400ms ease;
+}
+
+.age-products .product:hover {
+  transform: translateY(-15px);
+}
+
+.age-products .product img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.age-products .product h6 {
+  padding: 20px 16px;
+  text-align: center;
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .popular-by-age .shop-all {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .popular-by-age {
+    padding: 120px 0 112px 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+  }
+
+  .age-products {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1648,6 +1720,17 @@ p {
 .button.tertiary:hover,
 .button.tertiary:active {
   border-color: var(--green);
+}
+
+.button.quaternary {
+  background: var(--white);
+  color: var(--green);
+}
+
+.button.quaternary:hover,
+.button.quaternary:active {
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .button.full-width {
