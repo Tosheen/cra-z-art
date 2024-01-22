@@ -233,7 +233,7 @@ jQuery(document).ready(function () {
       dots: true,
       dotsClass: "compact-dots",
       centerMode: true,
-      centerPadding: isTabletOrBigger() ? "15vw" : "16px",
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
       infinite: isTabletOrBigger() ? true : false,
     });
   }
@@ -247,9 +247,65 @@ jQuery(document).ready(function () {
       dots: true,
       dotsClass: "compact-dots",
       centerMode: true,
-      centerPadding: "16px",
+      centerPadding: "28px",
       infinite: false,
       adaptiveHeight: true,
+    });
+  }
+
+  const $bestSellers = jQuery("#best-seller-products");
+
+  if ($bestSellers.length === 1) {
+    $bestSellers.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "28px",
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 3,
+            dots: false,
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            dots: false,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 5,
+            dots: false,
+            initialSlide: 3,
+          },
+        },
+        {
+          breakpoint: 2200,
+          settings: {
+            slidesToShow: 6,
+            dots: false,
+            initialSlide: 4,
+          },
+        },
+      ],
     });
   }
 
