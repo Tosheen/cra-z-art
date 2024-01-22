@@ -253,6 +253,21 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $blogItems = jQuery("#blog-items");
+
+  if ($blogItems.length === 1 && isMobile()) {
+    $blogItems.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "28px",
+      infinite: false,
+      adaptiveHeight: true,
+    });
+  }
+
   const $bestSellers = jQuery("#best-seller-products");
 
   if ($bestSellers.length === 1) {
@@ -272,6 +287,7 @@ jQuery(document).ready(function () {
           breakpoint: 480,
           settings: {
             slidesToShow: 2,
+            initialSlide: 0,
           },
         },
         {
@@ -279,6 +295,7 @@ jQuery(document).ready(function () {
           settings: {
             slidesToShow: 3,
             dots: false,
+            initialSlide: 1,
           },
         },
         {
