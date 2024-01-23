@@ -46,6 +46,8 @@ body {
 header.mobile {
   position: relative;
   width: 100%;
+  background-color: var(--white);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04), 88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.mobile .top-nav {
@@ -132,7 +134,6 @@ header.mobile .cart-count {
 
 .profile-account:hover {
   background-color: var(--green);
-  
 }
 
 .profile-account:hover img {
@@ -319,6 +320,8 @@ header.desktop {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center -1vw;
+  background-color: var(--white);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04), 88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.desktop .top-nav {
@@ -1205,6 +1208,78 @@ p {
 }
 
 /*-----------------------
+    Our brands
+-----------------------*/
+.our-brands {
+  padding: 60px 0 120px 0;
+  text-align: center;
+}
+
+.our-brands h2 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.our-brands .brands-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.our-brands .brand a {
+  display: block;
+  transition: transform 400ms ease;
+  color: var(--charcoal);
+}
+
+.our-brands .brand a:hover {
+  transform: translateY(-15px);
+}
+
+.our-brands .brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.our-brands .brand h4 {
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.our-brands .brand:nth-last-child(1):nth-child(odd) {
+  position: relative;
+  transform: translateX(50%);
+}
+
+@media screen and (min-width: 1025px) {
+  .our-brands {
+    padding: 60px 0 200px 0;
+  }
+
+  .our-brands h2 {
+    font-size: 2rem;
+    margin-bottom: 70px;
+  }
+
+  .our-brands .brands-list {
+    grid-template-columns: repeat(5, 180px);
+    max-width: 980px;
+    gap: 70px 20px;
+  }
+
+  .our-brands .brand:nth-last-child(1):nth-child(odd) {
+    transform: none;
+  }
+}
+
+/*-----------------------
     Rose Art Brand
 -----------------------*/
 .rose-art-brand {
@@ -1894,6 +1969,264 @@ p {
 }
 
 /*-----------------------
+    Shop Banner
+-----------------------*/
+.shop-banner {
+  padding: 40px 0 420px 0;
+  background-color: var(--light-blue);
+  position: relative;
+}
+
+.shop-banner > img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shop-banner > img.large {
+  display: none;
+}
+
+.shop-banner h3 {
+  margin-bottom: 16px;
+}
+
+.shop-banner .info {
+  max-width: 360px;
+}
+
+@media screen and (min-width: 768px) {
+  .shop-banner {
+    padding: 110px 0 90px 0;
+    background-image: url("../images/shop/bckg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+  }
+
+  .shop-banner > img.small {
+    display: none;
+  }
+
+  .shop-banner > img.large {
+    display: block;
+  }
+}
+
+/*-----------------------
+    Product Highlight
+-----------------------*/
+.product-highlight {
+  padding: 48px 0;
+  color: var(--white);
+  background-color: var(--purple);
+  position: relative;
+}
+
+.product-highlight img {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto 32px auto;
+  height: auto;
+}
+
+.product-highlight h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.product-highlight p {
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.16px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-highlight h5 {
+    font-size: 2rem;
+  }
+
+  .product-highlight .info {
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    padding-right: 30px;
+  }
+
+  .product-highlight p {
+    max-width: 400px;
+  }
+
+  .product-highlight .image-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .product-highlight img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/*-----------------------
+    Product Instant Shop
+-----------------------*/
+.instant-shop .product {
+  padding: 48px 0;
+  background-color: var(--yellow);
+}
+
+.instant-shop .product .action {
+  margin-bottom: 36px;
+}
+
+.instant-shop .product .action img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.instant-shop .product .action a {
+  display: inline-flex;
+  position: relative;
+  padding: 4px 32px 4px 8px;
+  background: var(--white);
+  border-radius: 2px;
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
+    88px 87px 124px 0px rgba(0, 0, 0, 0.09),
+    199px 195px 167px 0px rgba(0, 0, 0, 0.05),
+    354px 346px 198px 0px rgba(0, 0, 0, 0.01);
+  font-size: 0.875rem;
+  font-weight: 70;
+  line-height: 1.42;
+  font-weight: 700;
+  transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.instant-shop .product .action a:hover {
+  transform: translateX(15px);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3 );
+}
+
+.instant-shop .product .action a::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  background: url("../images/icons/triangle-right.svg") no-repeat center center /
+    16px 16px;
+}
+
+.instant-shop .product .info img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 22px;
+}
+
+.instant-shop .product .info h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: -0.48px;
+  margin-bottom: 16px;
+}
+
+.instant-shop .product .info p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.16px;
+}
+
+@media screen and (min-width: 768px) {
+  .instant-shop .product .details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .instant-shop .product .action {
+    margin-bottom: 0;
+    width: 46%;
+    max-width: 46%;
+    flex: 0 0 46%;
+  }
+
+  .instant-shop .product .info {
+    width: 46%;
+    max-width: 46%;
+    flex: 0 0 46%;
+  }
+
+  .instant-shop .product:nth-of-type(odd) .details .action {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .instant-shop .product .container {
+    max-width: 1220px;
+  }
+
+  .instant-shop .product .action {
+    width: 500px;
+    max-width: 500px;
+    flex: 0 0 500px;
+  }
+
+  .instant-shop .product .info {
+    width: 500px;
+    max-width: 500px;
+    flex: 0 0 500px;
+  }
+
+  .instant-shop .product .info img {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .instant-shop .product .info h5 {
+    font-size: 2rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+  }
+
+  .instant-shop .product .info p {
+    max-width: 410px;
+  }
+
+  .instant-shop .product .action img {
+    margin-bottom: 6px;
+  }
+
+  .instant-shop .product .details {
+    align-items: center;
+  }
+}
+
+/*-----------------------
     Animations
 -----------------------*/
 @keyframes pulse {
@@ -1999,8 +2332,8 @@ p {
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
 }
 
-.slick-prev:before,
-.slick-next:before {
+.slick-prev::before,
+.slick-next::before {
   width: 16px;
   height: 16px;
   position: absolute;
@@ -2010,12 +2343,12 @@ p {
   z-index: 10;
 }
 
-.slick-prev:before {
+.slick-prev::before {
   content: "" !important;
   background-image: url("../images/icons/chevron-left.svg");
 }
 
-.slick-next:before {
+.slick-next::before {
   content: "" !important;
   background-image: url("../images/icons/chevron-right.svg");
 }
@@ -2024,6 +2357,15 @@ p {
 .slick-arrow:focus,
 .slick-arrow:active {
   background-color: var(--green);
+}
+
+.slick-prev:hover::before,
+.slick-next:hover::before,
+.slick-prev:focus::before,
+.slick-next:focus::before,
+.slick-prev:active::before,
+.slick-next:active::before {
+  filter: brightness(0) invert(1);
 }
 
 .quick-buy {
@@ -2126,6 +2468,53 @@ p {
   .compact-dots li {
     width: 70px;
   }
+}
+
+/*-----------------------
+    Breadcrumbs 
+-----------------------*/
+.breadcrumbs {
+  padding: 35px 0 25px 0;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  padding: 0 13px;
+  position: relative;
+}
+
+.breadcrumbs li::after {
+  content: "/";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+
+.breadcrumbs a {
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42;
+  opacity: 0.6;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs a[aria-current="location"] {
+  opacity: 1;
 }
 
 /*-----------------------
