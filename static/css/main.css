@@ -122,6 +122,21 @@ header.mobile .cart-count {
   font-size: 1rem;
   line-height: 1.5;
   cursor: pointer;
+  transition: background-color 400ms ease, color 400ms ease;
+}
+
+.cart-count:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.profile-account:hover {
+  background-color: var(--green);
+  
+}
+
+.profile-account:hover img {
+  filter: brightness(0) invert(1);
 }
 
 header.mobile nav {
@@ -744,6 +759,14 @@ footer.main .social a {
   width: 24px;
   height: 24px;
   text-wrap: nowrap;
+}
+
+footer.main .social a img {
+  transition: filter 200ms ease;
+}
+
+footer.main .social a:hover img {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
 footer.main .products-mini-slider {
@@ -1937,6 +1960,7 @@ p {
   color: var(--green);
   border: 1px solid var(--grey);
   border-radius: 64px;
+  box-shadow: none;
 }
 
 .button.tertiary:hover,
