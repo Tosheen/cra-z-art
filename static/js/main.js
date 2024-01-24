@@ -338,6 +338,11 @@ jQuery(document).ready(function () {
       centerPadding: isTabletOrBigger() ? "15vw" : "28px",
       infinite: isTabletOrBigger() ? true : false,
     });
+
+    $productVideoItems.find(".product-item").magnificPopup({
+      delegate: "a",
+      type: "iframe",
+    });
   }
 
   function debounce(callback, delay) {
