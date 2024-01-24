@@ -326,6 +326,20 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $productVideoItems = jQuery("#product-video-items");
+
+  if ($productVideoItems.length === 1) {
+    $productVideoItems.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
