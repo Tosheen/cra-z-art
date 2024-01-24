@@ -47,7 +47,8 @@ header.mobile {
   position: relative;
   width: 100%;
   background-color: var(--white);
-  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04), 88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.mobile .top-nav {
@@ -321,7 +322,8 @@ header.desktop {
   background-size: 100% auto;
   background-position: center -1vw;
   background-color: var(--white);
-  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04), 88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.desktop .top-nav {
@@ -2116,6 +2118,43 @@ p {
 }
 
 /*-----------------------
+    Collection banner
+-----------------------*/
+.collection-banner {
+  padding: 45px 0 120px 0;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--green);
+  background-image: url("../images/our-community/crayons.png");
+  background-repeat: repeat-x;
+  background-size: auto auto;
+  background-position: left bottom;
+}
+
+.collection-banner h3 {
+  font-weight: 400;
+}
+
+.collection-banner .info {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.collection-banner .info > * + * {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .collection-banner {
+    padding: 140px 0 120px 0;
+  }
+
+  .collection-banner h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/*-----------------------
     Product Instant Shop
 -----------------------*/
 .instant-shop .product {
@@ -2155,7 +2194,7 @@ p {
 
 .instant-shop .product .action a:hover {
   transform: translateX(15px);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3 );
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .instant-shop .product .action a::after {
