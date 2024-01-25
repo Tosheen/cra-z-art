@@ -1,0 +1,9 @@
+.thumbnail-wrapper {
+    padding: 0 8px;
+  }
+  
+  .thumbnail-wrapper a {
+    border-radius: 16px !important;
+    overflow: hidden;
+  }
+  
