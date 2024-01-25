@@ -774,7 +774,8 @@ footer.main .social a:hover img {
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
-footer.main .products-mini-slider {
+footer.main .products-mini-slider,
+footer.main .instagram-feed {
   margin-bottom: 40px;
 }
 
@@ -818,7 +819,8 @@ footer.main .products-mini-slider .item img {
     width: 175px;
   }
 
-  footer.main .products-mini-slider {
+  footer.main .products-mini-slider,
+  footer.main .instagram-feed {
     margin-bottom: 60px;
   }
 
