@@ -360,6 +360,45 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $relatedProducts = jQuery("#related-products");
+
+  if ($relatedProducts.length === 1) {
+    $relatedProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "28px",
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            centerMode: false,
+            centerPadding: "0px",
+          },
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 4,
+            centerMode: false,
+            centerPadding: "0px",
+          },
+        },
+        {
+          breakpoint: 1025,
+          settings: "unslick",
+        },
+      ],
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 

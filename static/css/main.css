@@ -1577,6 +1577,14 @@ p {
   margin-bottom: 40px;
 }
 
+.best-seller-products .slick-list {
+  padding-bottom: 15px !important;
+}
+
+.best-seller-products .product {
+  margin: 0 8px;
+}
+
 .product-items .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
@@ -1584,7 +1592,6 @@ p {
   background-color: var(--white);
   overflow: hidden;
   text-align: center;
-  margin: 0 8px;
 }
 
 .product-items .product .img-wrapper {
@@ -1654,7 +1661,7 @@ p {
 }
 
 .our-best-sellers .shop-all {
-  margin-top: 112px;
+  margin-top: 100px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1684,8 +1691,65 @@ p {
   }
 
   .our-best-sellers .shop-all {
-    margin: 40px auto 0 auto;
+    margin: 25px auto 0 auto;
     max-width: 240px;
+  }
+}
+
+/*-----------------------
+    You may also like
+-----------------------*/
+.you-may-also-like {
+  padding: 95px 0 110px 0;
+  background: var(--light-blue) url("../images/items-bckg.png") no-repeat
+    center top / cover;
+}
+
+.you-may-also-like h3 {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.related-products {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.related-products .product {
+  margin: 0 8px;
+}
+
+.related-products .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.related-products .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.related-products .slick-prev {
+  left: 20px;
+}
+
+.related-products .slick-next {
+  right: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .related-products {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .related-products .product {
+    margin: 0;
   }
 }
 
