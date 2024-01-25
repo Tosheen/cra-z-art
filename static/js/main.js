@@ -345,6 +345,21 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $productHighlights = jQuery("#product-highlights");
+
+  if ($productHighlights.length === 1) {
+    $productHighlights.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: 0,
+      infinite: false,
+      adaptiveHeight: true,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
