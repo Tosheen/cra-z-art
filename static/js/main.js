@@ -399,6 +399,21 @@ jQuery(document).ready(function () {
     });
   }
 
+  jQuery(".filter-option button").on("click", function () {
+    const $filter = jQuery(this);
+    const filterCategory = $filter.data("option");
+    const $filterItem = $filter.parent();
+
+    if ($filterItem.hasClass("active") === false) {
+      jQuery(".filter-option").not($filterItem).removeClass("active");
+      jQuery(".filter-list").removeClass("active");
+      $filterItem.addClass("active");
+      jQuery(`.filter-list[data-option="${filterCategory}"]`).addClass(
+        "active"
+      );
+    }
+  });
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
