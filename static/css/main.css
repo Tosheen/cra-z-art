@@ -2094,6 +2094,108 @@ p {
 }
 
 /*-----------------------
+    Shop Filters
+-----------------------*/
+.shop-filters {
+  padding: 95px 0;
+}
+
+.shop-filters .container {
+  max-width: 970px;
+}
+
+.filter-options {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 2px solid var(--light-grey);
+  gap: 25px;
+}
+
+.filter-option {
+  transform: translateY(2px);
+}
+
+.filter-option button {
+  display: inline-flex;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 10px 6px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--dark-grey);
+  cursor: pointer;
+  opacity: 0.8;
+  outline: none;
+}
+
+.filter-option:hover button,
+.filter-option.active button {
+  border-bottom-color: var(--charcoal);
+  color: var(--charcoal);
+  opacity: 1;
+}
+
+.filter-list {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px 16px;
+}
+
+.filter-list.active {
+  display: grid;
+}
+
+.filter-item a {
+  display: block;
+  width: 100%;
+  padding-top:  15px;
+  transition: transform 400ms ease;
+}
+
+.filter-item a:hover {
+  transform: translateY(-10px);
+}
+
+.filter-item a img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+.filter-item a h5 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .filter-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .filter-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+/*-----------------------
     Product Highlight
 -----------------------*/
 .product-highlight {
