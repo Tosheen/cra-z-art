@@ -1,0 +1,140 @@
+.widget_premmerce_filter_filter_widget {
+  max-width: 1400px !important;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.filter--style-premmerce .filter__item {
+  padding: 0;
+}
+
+.filter__item-border {
+  border: none;
+}
+
+.premmerce-filter-body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+
+.filter--style-premmerce .filter__title {
+  color: var(--charcoal);
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.filter--style-premmerce .filter__title::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../images/icons/triangle-down.svg") no-repeat center center /
+    16px 16px;
+}
+
+.filter__inner {
+  margin-top: 0;
+}
+
+.filter__inner .filter__properties-item {
+  margin: 0;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter__properties-item .filter__checkgroup-title {
+  color: var(--charcoal);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.filter__checkgroup {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.filter__checkgroup-body {
+  display: inline-flex;
+  padding-left: 40px;
+}
+
+.filter__checkgroup-title {
+  margin: 0 !important;
+}
+
+.filter__checkgroup .filter__checkgroup-check {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cccccc;
+}
+
+.filter__checkgroup .filter__checkgroup-check::before {
+  opacity: 0;
+  content: "✓";
+  background-color: #008934;
+  color: white;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 400ms ease;
+}
+
+.filter__checkgroup-control[type="checkbox"]:checked
+  + .filter__checkgroup-check {
+  border-color: #008934;
+}
+
+.filter__checkgroup-control[type="checkbox"]:checked
+  + .filter__checkgroup-check::before {
+  opacity: 1;
+}
+
+.filter__properties-list {
+  display: none;
+}
+
+.filter__properties-list.active {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .premmerce-filter-body {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .premmerce-filter-body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .filter--style-premmerce .filter__title::after {
+    display: none;
+  }
+
+  .filter__properties-list {
+    display: block !important;
+  }
+}
