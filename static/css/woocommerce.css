@@ -1,7 +1,12 @@
-.widget_premmerce_filter_filter_widget {
+.premmerce-filter-ajax-container {
   max-width: 1400px !important;
   padding: 0 20px;
   margin: 0 auto;
+  position: relative;
+}
+
+.widget_premmerce_filter_filter_widget {
+  max-width: 1400px !important;
 }
 
 .filter--style-premmerce .filter__item {
@@ -18,6 +23,23 @@
   gap: 0;
 }
 
+.woocommerce-products-header {
+  display: none;
+}
+
+.filter--style-custom .filter__title {
+  display: block;
+  padding: 16px 0;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
 .filter--style-premmerce .filter__title {
   color: var(--charcoal);
   font-family: "Lato", sans-serif;
@@ -26,12 +48,17 @@
   line-height: 1.14;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  padding: 24px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-.filter--style-premmerce .filter__title::after {
+.filter--style-custom .filter__item {
+  padding: 0;
+  margin: 0;
+}
+
+.filter__item .filter__title::after {
   content: "";
   width: 16px;
   height: 16px;
@@ -49,19 +76,27 @@
 
 .filter__inner .filter__properties-item {
   margin: 0;
-  padding: 24px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .filter__properties-item .filter__checkgroup-title {
   color: var(--charcoal);
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 400;
+  padding: 0;
+}
+
+.filter__properties-item .filter__checkgroup-count {
+  position: static;
+  vertical-align: auto;
+  margin-left: 4px;
 }
 
 .filter__checkgroup {
   display: flex;
+  align-items: center;
   width: 100%;
   position: relative;
 }
@@ -118,14 +153,133 @@
   display: block;
 }
 
+.woocommerce .woocommerce-result-count,
+.woocommerce-page .woocommerce-result-count {
+  float: none;
+  margin: 0;
+}
+
+.woocommerce .woocommerce-ordering,
+.woocommerce-page .woocommerce-ordering {
+  float: none;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  width: 170px;
+}
+
+.woocommerce .woocommerce-ordering select {
+  border: none;
+  background-color: transparent;
+  padding: 5px 0;
+  font-weight: 700;
+  color: var(--black);
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.woocommerce .products ul::after,
+.woocommerce .products ul::before,
+.woocommerce ul.products::after,
+.woocommerce ul.products::before {
+  display: none;
+}
+
+.woocommerce ul.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 40px 0 0 0;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  float: none;
+  margin: 0;
+  width: auto;
+}
+
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+  float: none;
+  margin: 0;
+  width: auto;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3,
+.woocommerce ul.products li.product .price {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.32px;
+  color: var(--black);
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  margin-bottom: 8px;
+}
+
+.woocommerce ul.products li.product .button {
+  display: none;
+}
+
+.woocommerce ul.products li.product .onsale {
+  display: none
+}
+
+button.filter-products {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  color: var(--black);
+  padding: 0;
+  border: none;
+}
+
+button.filter-products::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  background: url("../images/icons/filter.svg") no-repeat center center / 24px 24px;
+}
+
+.widget_premmerce_filter_filter_widget {
+  display: none;
+}
+
+.widget_premmerce_filter_filter_widget.show {
+  display: block;
+}
+
 @media screen and (min-width: 600px) {
   .premmerce-filter-body {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .woocommerce ul.products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 30px;
+  }
+
+  button.filter-products {
+    font-size: 0.875rem;
+  }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   .premmerce-filter-body {
     grid-template-columns: repeat(4, 1fr);
   }

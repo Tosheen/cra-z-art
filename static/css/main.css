@@ -1214,17 +1214,17 @@ p {
 /*-----------------------
     Our brands
 -----------------------*/
-.our-brands {
+.company-brands {
   padding: 60px 0 120px 0;
   text-align: center;
 }
 
-.our-brands h2 {
+.company-brands h2 {
   font-size: 1.5rem;
   margin-bottom: 50px;
 }
 
-.our-brands .brands-list {
+.company-brands .brands-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 20px;
@@ -1232,24 +1232,24 @@ p {
   margin: 0 auto;
 }
 
-.our-brands .brand a {
+.company-brands .brand a {
   display: block;
   transition: transform 400ms ease;
   color: var(--charcoal);
 }
 
-.our-brands .brand a:hover {
+.company-brands .brand a:hover {
   transform: translateY(-15px);
 }
 
-.our-brands .brand img {
+.company-brands .brand img {
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 16px;
 }
 
-.our-brands .brand h4 {
+.company-brands .brand h4 {
   font-size: 0.875rem;
   font-weight: 900;
   line-height: 1.14;
@@ -1257,28 +1257,28 @@ p {
   text-transform: uppercase;
 }
 
-.our-brands .brand:nth-last-child(1):nth-child(odd) {
+.company-brands .brand:nth-last-child(1):nth-child(odd) {
   position: relative;
   transform: translateX(50%);
 }
 
 @media screen and (min-width: 1025px) {
-  .our-brands {
+  .company-brands {
     padding: 60px 0 200px 0;
   }
 
-  .our-brands h2 {
+  .company-brands h2 {
     font-size: 2rem;
     margin-bottom: 70px;
   }
 
-  .our-brands .brands-list {
+  .company-brands .brands-list {
     grid-template-columns: repeat(5, 180px);
     max-width: 980px;
     gap: 70px 20px;
   }
 
-  .our-brands .brand:nth-last-child(1):nth-child(odd) {
+  .company-brands .brand:nth-last-child(1):nth-child(odd) {
     transform: none;
   }
 }
@@ -2933,6 +2933,26 @@ p {
 -----------------------*/
 .breadcrumbs {
   padding: 35px 0 30px 0;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+  padding: 35px 20px 30px 20px;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+  opacity: 0.7;
+}
+
+.woocommerce .woocommerce-breadcrumb::before,
+.woocommerce .woocommerce-breadcrumb::after {
+  display: none;
 }
 
 .breadcrumbs ol {
