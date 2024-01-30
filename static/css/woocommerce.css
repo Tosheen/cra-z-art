@@ -199,6 +199,7 @@
   float: none;
   margin: 0;
   width: auto;
+  overflow: hidden;
 }
 
 .woocommerce ul.products[class*="columns-"] li.product,
@@ -206,6 +207,7 @@
   float: none;
   margin: 0;
   width: auto;
+  overflow: hidden;
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title,
@@ -280,6 +282,12 @@ button.filter-products::before {
 
 .widget_premmerce_filter_filter_widget.show {
   display: block;
+}
+
+.woocommerce ul.products li.product a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 600px) {
