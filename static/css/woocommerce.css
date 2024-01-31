@@ -1,6 +1,6 @@
 .premmerce-filter-ajax-container {
   max-width: 1400px !important;
-  padding: 0 20px;
+  padding: 0 20px 30px 20px;
   margin: 0 auto;
   position: relative;
 }
@@ -290,6 +290,153 @@ button.filter-products::before {
   overflow: hidden;
 }
 
+.woocommerce .product.type-product {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+}
+
+.woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+.woocommerce-page #content div.product div.images,
+.woocommerce-page div.product div.images {
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  width: auto;
+  float: none;
+}
+
+.summary.entry-summary h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.summary.entry-summary .price {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--grey);
+}
+
+.woocommerce div.product form.cart div.quantity {
+  width: 100%;
+  float: none;
+  margin-bottom: 24px;
+}
+
+.summary .quantity input[type="number"] {
+  display: block;
+  width: 100%;
+  max-width: 410px;
+  border-radius: 24px;
+  background-color: var(--white);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
+    88px 87px 124px 0px rgba(0, 0, 0, 0.09);
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  border: none;
+}
+
+.product .woocommerce-Price-amount.amount {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.42;
+  color: var(--charcoal);
+}
+
+.woocommerce-product-details__short-description p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.product_meta a {
+  color: var(--charcoal);
+  text-decoration: underline;
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button.alt {
+  display: block;
+  width: 100%;
+  max-width: 410px;
+  padding: 14px 32px;
+  border-radius: 64px;
+  background-color: var(--green);
+  box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.08),
+    44px 44px 64px 0px rgba(0, 0, 0, 0.04);
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.42;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button.alt:hover {
+  color: var(--green);
+  background-color: var(--white);
+}
+
+.woocommerce-product-gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.woocommerce
+  div.product
+  div.images
+  .woocommerce-product-gallery__image:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.woocommerce
+  div.product
+  div.images
+  .woocommerce-product-gallery__image:nth-child(n + 2) {
+  width: auto;
+  display: flex;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__image a {
+  display: block;
+  width: 100%;
+}
+
+.woocommerce div.product .woocommerce-tabs,
+.related.products {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.tabs.wc-tabs h2 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+}
+
 @media screen and (min-width: 600px) {
   .premmerce-filter-body {
     grid-template-columns: repeat(2, 1fr);
@@ -306,6 +453,12 @@ button.filter-products::before {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .woocommerce .product.type-product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .premmerce-filter-body {
     grid-template-columns: repeat(4, 1fr);
@@ -317,5 +470,13 @@ button.filter-products::before {
 
   .filter__properties-list {
     display: block !important;
+  }
+
+  .woocommerce .product.type-product {
+    gap: 40px 70px;
+  }
+
+  .summary.entry-summary h1 {
+    font-size: 1.5rem;
   }
 }

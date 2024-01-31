@@ -1179,8 +1179,16 @@ p {
   border-radius: 50%;
 }
 
-.our-top-brands .button {
+.our-top-brands .action-button {
   display: none;
+}
+
+.summary .stock.in-stock {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1206,7 +1214,7 @@ p {
     display: none;
   }
 
-  .our-top-brands .button {
+  .our-top-brands .action-button {
     display: inline-flex;
   }
 }
@@ -1321,7 +1329,6 @@ p {
   position: relative;
   height: 400px;
   padding: 0 8px;
-
   overflow: hidden;
 }
 
@@ -1516,7 +1523,7 @@ p {
   z-index: 20;
 }
 
-.community-reviews .product .button {
+.community-reviews .product .action-button {
   min-width: 100%;
 }
 
@@ -1536,7 +1543,7 @@ p {
     gap: 20px;
   }
 
-  .community-reviews .product .button {
+  .community-reviews .product .action-button {
     min-width: 200px;
   }
 }
@@ -1635,7 +1642,7 @@ p {
   font-weight: 700;
 }
 
-.product-items .product .button {
+.product-items .product .action-button {
   margin-top: 32px;
   min-width: 100%;
 }
@@ -2020,7 +2027,7 @@ p {
   margin-bottom: 32px;
 }
 
-.our-story .button {
+.our-story .action-button {
   width: 100%;
   max-width: 400px;
 }
@@ -2042,7 +2049,7 @@ p {
     margin-right: auto;
   }
 
-  .our-story .button {
+  .our-story .action-button {
     max-width: 200px;
   }
 }
@@ -2705,7 +2712,7 @@ p {
 /*-----------------------
     Buttons
 -----------------------*/
-.button {
+.action-button {
   display: inline-flex;
   font-size: 0.875rem;
   font-weight: 900;
@@ -2724,29 +2731,29 @@ p {
     44px 44px 64px 0px rgba(0, 0, 0, 0.04);
 }
 
-.button.primary {
+.action-button.primary {
   background: var(--white);
   color: var(--charcoal);
 }
 
-.button.primary:hover,
-.button.primary:active {
+.action-button.primary:hover,
+.action-button.primary:active {
   background-color: var(--green);
   color: var(--white);
 }
 
-.button.secondary {
+.action-button.secondary {
   background: var(--green);
   color: var(--white);
 }
 
-.button.secondary:hover,
-.button.secondary:active {
+.action-button.secondary:hover,
+.action-button.secondary:active {
   background-color: var(--white);
   color: var(--green);
 }
 
-.button.tertiary {
+.action-button.tertiary {
   background: var(--white);
   color: var(--green);
   border: 1px solid var(--grey);
@@ -2754,24 +2761,24 @@ p {
   box-shadow: none;
 }
 
-.button.tertiary:hover,
-.button.tertiary:active {
+.action-button.tertiary:hover,
+.action-button.tertiary:active {
   border-color: var(--green);
 }
 
-.button.quaternary {
+.action-button.quaternary {
   background: var(--white);
   color: var(--green);
   border: 1px solid var(--white);
 }
 
-.button.quaternary:hover,
-.button.quaternary:active {
+.action-button.quaternary:hover,
+.action-button.quaternary:active {
   background-color: var(--green);
   color: var(--white);
 }
 
-.button.full-width {
+.action-button.full-width {
   width: 100%;
 }
 
