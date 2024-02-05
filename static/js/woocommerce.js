@@ -25,4 +25,13 @@ jQuery(document).ready(function () {
   });
 
   $filtersContainer.prepend($filterProducts);
+
+  jQuery(".na-wc-learn-more").on("click", function () {
+    jQuery("html, body").animate(
+      {
+        scrollTop: jQuery("#accordion-container").offset().top,
+      },
+      1000
+    );
+  });
 });
