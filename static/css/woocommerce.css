@@ -662,6 +662,23 @@ article[class^="post"] a {
   text-decoration: underline;
 }
 
+.taxonomy-category_filter-puzzles-data .wcf-shop-wrapper .container {
+  position: relative;
+}
+
+.taxonomy-category_filter-puzzles-data .products {
+  max-width: 1000px;
+}
+
+.taxonomy-category_filter-puzzles-data .sidebar-filters {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: calc(25% - 0.5rem);
+  padding: 0.5rem;
+}
+
 @media screen and (min-width: 600px) {
   .premmerce-filter-body {
     grid-template-columns: repeat(2, 1fr);
@@ -707,5 +724,9 @@ article[class^="post"] a {
 
   .woocommerce-tabs.wc-tabs-wrapper {
     padding: 140px 20px 114px 20px;
+  }
+
+  .taxonomy-category_filter-puzzles-data .sidebar-filters {
+    display: block;
   }
 }
