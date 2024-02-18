@@ -2514,36 +2514,90 @@ p {
     Collection banner
 -----------------------*/
 .collection-banner {
-  padding: 45px 0 120px 0;
+  padding: 45px 0 0 0;
   text-align: center;
   color: var(--white);
   background-color: var(--green);
-  background-image: url("../images/our-community/crayons.png");
-  background-repeat: repeat-x;
-  background-size: auto auto;
-  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .collection-banner h3 {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .collection-banner .info {
-  max-width: 620px;
+  max-width: 520px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 .collection-banner .info > * + * {
   margin-top: 16px;
 }
 
+.collection-banner .info img {
+  display: block;
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collection-banner .decor {
+  display: none;
+  position: absolute;
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  bottom: 0;
+  z-index: 0;
+}
+
+.collection-banner .decor.left-decor {
+  left: 0;
+}
+
+.collection-banner .decor.right-decor {
+  right: 0;
+}
+
+.collection-banner p {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
 @media screen and (min-width: 768px) {
   .collection-banner {
-    padding: 140px 0 120px 0;
+    padding: 50px 0 0 0;
+    position: relative;
   }
 
   .collection-banner h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .collection-banner .decor {
+    display: block;
+    max-width: 360px;
+  }
+
+  .collection-banner p {
+    font-size: 1.375rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .collection-banner .decor {
+    max-width: 540px;
   }
 }
 
