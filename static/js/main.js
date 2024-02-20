@@ -109,6 +109,8 @@ jQuery(document).ready(function () {
     }
   }
 
+  let openMenuTimeout = null;
+
   if (matchMedia("(pointer:fine)").matches === true) {
     $menuItems
       .on("mouseenter", function () {
@@ -116,7 +118,9 @@ jQuery(document).ready(function () {
         const $item = jQuery(this);
         if ($item.hasClass("menu-item-has-children")) {
           if ($megaMenu.hasClass("open") === false) {
-            $megaMenu.addClass("open");
+            openMenuTimeout = setTimeout(() => {
+              $megaMenu.addClass("open");
+            }, 1000);
           }
 
           adjustMegaMenuView($item);
@@ -125,6 +129,7 @@ jQuery(document).ready(function () {
         }
       })
       .on("mouseleave", function () {
+        clearTimeout(openMenuTimeout);
         megaMenuTimeout = setTimeout(hideMegaMenu, 500);
       });
 
