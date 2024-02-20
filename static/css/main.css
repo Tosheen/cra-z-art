@@ -2058,20 +2058,25 @@ p {
     Shop Banner
 -----------------------*/
 .shop-banner {
-  padding: 40px 0 420px 0;
+  padding: 40px 0 0 0;
   background-color: var(--light-blue);
   position: relative;
 }
 
-.shop-banner > img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.shop-banner > img.small {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+  margin: 30px auto 0 auto;
 }
 
 .shop-banner > img.large {
   display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .shop-banner h3 {
@@ -2082,7 +2087,7 @@ p {
   max-width: 360px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
   .shop-banner {
     padding: 110px 0 90px 0;
     background-image: url("../images/shop/bckg.png");
@@ -2574,7 +2579,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .collection-banner {
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
     position: relative;
   }
 
