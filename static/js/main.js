@@ -120,7 +120,7 @@ jQuery(document).ready(function () {
           if ($megaMenu.hasClass("open") === false) {
             openMenuTimeout = setTimeout(() => {
               $megaMenu.addClass("open");
-            }, 1000);
+            }, 500);
           }
 
           adjustMegaMenuView($item);
