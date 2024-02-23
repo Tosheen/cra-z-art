@@ -2548,28 +2548,21 @@ p {
 
 .collection-banner h3 {
   font-weight: 700;
-  text-shadow: 1px 1px 3px var(--charcoal);
 }
 
 .collection-banner p {
   font-size: 1.25rem;
   font-weight: 500;
-  text-shadow: 1px 1px 3px var(--charcoal);
 }
 
 .collection-banner .info {
   width: 90%;
-  max-width: 400px;
-  padding: 1rem;
+  max-width: 600px;
+  padding: 120px 1rem 1rem 1rem;
   margin: 0 auto;
   position: relative;
   z-index: 10;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 .collection-banner .info > * + * {
@@ -2592,7 +2585,8 @@ p {
 
 @media screen and (min-width: 1025px) {
   .collection-banner {
-    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 22px;
+    grid-template-columns: 29% 40% 31%;
   }
 
   .collection-banner .banner-slide:nth-child(3) {
@@ -2600,7 +2594,25 @@ p {
   }
 
   .collection-banner .banner-slide {
-    height: 27vw;
+    height: 31vw;
+  }
+
+  .collection-banner h3 {
+    font-size: ;
+  }
+  
+  .collection-banner p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .collection-banner h3 {
+    font-size: 3rem;
+  }
+  
+  .collection-banner p {
+    font-size: 1.5rem;
   }
 }
 
