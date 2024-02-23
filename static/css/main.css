@@ -2522,6 +2522,7 @@ p {
   gap: 1rem;
   position: relative;
   overflow: hidden;
+  background-color: var(--white);
 }
 
 .collection-banner .banner-slide {
@@ -2592,7 +2593,7 @@ p {
   }
 
   .collection-banner .banner-slide {
-    height: 27vw;
+    height: 31.25vw;
   }
 }
 
