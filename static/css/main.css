@@ -2557,8 +2557,7 @@ p {
 }
 
 .collection-banner .info {
-  width: 90%;
-  padding: 120px 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -2581,9 +2580,14 @@ p {
   .collection-banner .banner-slide:nth-child(2) {
     display: block;
   }
+
+  .collection-banner .info {
+    width: 90%;
+    padding: 120px 1rem 1rem 1rem;
+  }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   .collection-banner {
     grid-template-columns: 29% 40% 31%;
   }
