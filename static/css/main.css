@@ -1433,7 +1433,7 @@ p {
   .rose-art-products .slick-prev {
     left: 56px;
   }
-  
+
   .rose-art-products .slick-next {
     right: 56px;
   }
@@ -1710,8 +1710,8 @@ p {
 -----------------------*/
 .you-may-also-like {
   padding: 95px 0 110px 0;
-  background: var(--light-blue) url("../images/items-bckg.png") no-repeat
-    center top / cover;
+  background: var(--light-blue) url("../images/items-bckg.png") no-repeat center
+    top / cover;
 }
 
 .you-may-also-like h3 {
@@ -2167,7 +2167,7 @@ p {
 .filter-item a {
   display: block;
   width: 100%;
-  padding-top:  15px;
+  padding-top: 15px;
   transition: transform 400ms ease;
 }
 
@@ -2205,7 +2205,6 @@ p {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
 
 /*-----------------------
     Product Highlight
@@ -2272,7 +2271,6 @@ p {
   z-index: 20;
 }
 
-
 @media screen and (min-width: 768px) {
   .product-highlight h5 {
     font-size: 2rem;
@@ -2328,7 +2326,7 @@ p {
   .product-highlights .slick-prev {
     left: 56px;
   }
-  
+
   .product-highlights .slick-next {
     right: 56px;
   }
@@ -2482,10 +2480,10 @@ p {
     background-size: 100% auto;
     background-position: left 0px top 100px;
   }
-  
+
   .product-video-items {
     margin-top: 60px;
-  } 
+  }
 
   .product-videos h2 {
     font-weight: 900;
@@ -2509,7 +2507,7 @@ p {
   .product-videos .slick-prev {
     left: 56px;
   }
-  
+
   .product-videos .slick-next {
     right: 56px;
   }
@@ -2519,90 +2517,90 @@ p {
     Collection banner
 -----------------------*/
 .collection-banner {
-  padding: 45px 0 0 0;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--green);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
   position: relative;
   overflow: hidden;
 }
 
+.collection-banner .banner-slide {
+  position: relative;
+  color: var(--white);
+  height: 80vw;
+}
+
+.collection-banner .banner-slide:nth-child(2),
+.collection-banner .banner-slide:nth-child(3) {
+  display: none;
+}
+
+.collection-banner .banner-slide > img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
 .collection-banner h3 {
   font-weight: 700;
+  text-shadow: 1px 1px 3px var(--charcoal);
+}
+
+.collection-banner p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px var(--charcoal);
 }
 
 .collection-banner .info {
-  max-width: 520px;
+  width: 90%;
+  max-width: 400px;
+  padding: 1rem;
   margin: 0 auto;
   position: relative;
   z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .collection-banner .info > * + * {
   margin-top: 16px;
 }
 
-.collection-banner .info img {
-  display: block;
-  max-width: 80%;
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.collection-banner .decor {
-  display: none;
-  position: absolute;
-  width: auto;
-  max-width: 300px;
-  height: auto;
-  bottom: 0;
-  z-index: 0;
-}
-
-.collection-banner .decor.left-decor {
-  left: 0;
-}
-
-.collection-banner .decor.right-decor {
-  right: 0;
-}
-
-.collection-banner p {
-  font-size: 1.125rem;
-  line-height: 1.25;
-}
-
 @media screen and (min-width: 768px) {
   .collection-banner {
-    padding: 60px 0 0 0;
-    position: relative;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .collection-banner h3 {
-    font-size: 3rem;
+  .collection-banner .banner-slide {
+    height: 40vw;
+  }
+
+  .collection-banner .banner-slide:nth-child(2) {
+    display: block;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  .collection-banner .decor {
+  .collection-banner {
+    grid-template-columns: 1.3fr 1fr 1fr;
+  }
+
+  .collection-banner .banner-slide:nth-child(3) {
     display: block;
-    max-width: 360px;
   }
 
-  .collection-banner p {
-    font-size: 1.375rem;
-    font-weight: 500;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .collection-banner .decor {
-    max-width: 540px;
+  .collection-banner .banner-slide {
+    height: 27vw;
   }
 }
 
