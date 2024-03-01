@@ -2592,6 +2592,19 @@ p {
   margin-top: 16px;
 }
 
+.collection-banner-description {
+  margin-top: 1rem;
+  padding: 50px 0;
+  background-color: var(--light-blue);
+  text-align: center;
+  color: var(--white);
+}
+
+.collection-banner-description p {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
   .collection-banner {
     grid-template-columns: repeat(2, 1fr);
@@ -2615,6 +2628,10 @@ p {
     max-width: 300px;
     width: auto;
     height: auto;
+  }
+
+  .collection-banner-description p {
+    font-size: 1.5rem;
   }
 }
 
@@ -2674,17 +2691,18 @@ p {
 .instant-shop .product .action a {
   display: inline-flex;
   position: relative;
-  padding: 4px 32px 4px 8px;
+  padding: 8px 32px 8px 8px;
   background: var(--white);
   border-radius: 2px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
     88px 87px 124px 0px rgba(0, 0, 0, 0.09),
     199px 195px 167px 0px rgba(0, 0, 0, 0.05),
     354px 346px 198px 0px rgba(0, 0, 0, 0.01);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 70;
   line-height: 1.42;
   font-weight: 700;
+  margin-left: 1rem;
   transition: transform 400ms ease, box-shadow 400ms ease;
 }
 
