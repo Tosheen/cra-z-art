@@ -662,6 +662,10 @@ article[class^="post"] a {
   text-decoration: underline;
 }
 
+.taxonomy-category_filter-puzzles-data .wcf-shop-wrapper {
+  margin-top: 2rem;
+}
+
 .taxonomy-category_filter-puzzles-data .wcf-shop-wrapper .container {
   position: relative;
 }
