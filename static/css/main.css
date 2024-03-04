@@ -2286,6 +2286,7 @@ p {
   }
 
   .product-highlight p {
+    font-size: 1.5rem;
     max-width: 400px;
   }
 
@@ -3054,6 +3055,21 @@ p {
   .compact-dots li {
     width: 60px;
   }
+}
+
+/*-----------------------
+    Policy
+-----------------------*/
+.policy-wrapper {
+  background-color: var(--white);
+}
+
+.policy-wrapper h3 {
+  font-size: 2.25rem;
+}
+
+.policy-wrapper .container > * + * {
+  margin-top: 1rem;
 }
 
 /*-----------------------
