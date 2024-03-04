@@ -3062,6 +3062,8 @@ p {
 -----------------------*/
 .policy-wrapper {
   background-color: var(--white);
+  position: relative;
+  padding: 20px 0;
 }
 
 .policy-wrapper h3 {
@@ -3072,6 +3074,24 @@ p {
   margin-top: 1rem;
 }
 
+.policy-wrapper ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+.policy-wrapper ul ul {
+    list-style-type: decimal;
+    
+}
+
+.policy-wrapper ul li {
+  margin-top: 0.5rem;
+}
+
+.policy-wrapper a {
+  color: var(--green);
+  text-decoration: underline;
+}
 /*-----------------------
     Breadcrumbs 
 -----------------------*/
