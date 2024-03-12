@@ -2663,7 +2663,7 @@ p {
   .collection-banner h3 {
     font-size: 3.25rem;
   }
-  
+
   .collection-banner p {
     font-size: 1.5rem;
   }
@@ -3061,38 +3061,311 @@ p {
 /*-----------------------
     Policy
 -----------------------*/
-.policy-wrapper {
+.general-content-wrapper {
   background-color: var(--white);
   position: relative;
-  padding: 20px 0;
+  padding: 80px 0;
 }
 
-.policy-wrapper h3 {
+.general-content-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.general-content-wrapper h2 {
   font-size: 2.25rem;
 }
 
-.policy-wrapper .container > * + * {
+.general-content-wrapper h3 {
+  font-size: 2rem;
+}
+
+.general-content-wrapper h4 {
+  font-size: 1.75rem;
+}
+
+.general-content-wrapper .container {
+  max-width: 960px;
+}
+
+.general-content-wrapper .container > * + * {
   margin-top: 1rem;
 }
 
-.policy-wrapper ul {
+.general-content-wrapper ul {
   padding-left: 1rem;
   list-style-type: disc;
+  margin-left: 1rem;
 }
 
-.policy-wrapper ul ul {
-    list-style-type: decimal;
-    
+.general-content-wrapper ul ul {
+  list-style-type: decimal;
 }
 
-.policy-wrapper ul li {
-  margin-top: 0.5rem;
+.general-content-wrapper ul li {
+  margin-top: 0.75rem;
 }
 
-.policy-wrapper a {
+.general-content-wrapper a {
+  font-weight: 500;
+  color: var(--red);
+}
+
+.general-content-wrapper a:hover {
   color: var(--green);
   text-decoration: underline;
 }
+
+.general-content-wrapper .gfield_required_asterisk {
+  color: var(--red);
+}
+
+.general-content-wrapper .gform_fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.general-content-wrapper .gform_fields fieldset .ginput_complex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.general-content-wrapper .gform_fields legend,
+.general-content-wrapper .gform_fields label {
+  display: none;
+}
+
+.general-content-wrapper .gfield_checkbox label {
+  display: inline-flex;
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.general-content-wrapper .gform_heading {
+  margin-bottom: 0.5rem;
+}
+
+.general-content-wrapper
+  :is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--light-grey);
+  border-radius: 5px;
+  background-clip: padding-box;
+  border: 1px solid var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+
+.general-content-wrapper
+  :is(input[type="text"], input[type="email"], input[type="tel"], textarea):focus {
+  background-color: #fff;
+  border-color: var(--green);
+  outline: 0;
+}
+
+.general-content-wrapper .gform_footer {
+  margin-top: 1rem;
+}
+
+.general-content-wrapper .gform_footer input[type="submit"] {
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  border-radius: 64px;
+  padding: 16px 32px;
+  transition: color 300ms ease, background-color 300ms ease,
+    border-color 300ms ease;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background: var(--green);
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .general-content-wrapper .gform_fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*-----------------------
+    News Banner
+-----------------------*/
+.news-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.news-banner + .page-header {
+  text-align: center;
+}
+
+/*-----------------------
+    Blog Posts
+-----------------------*/
+.blog-posts {
+  padding: 70px 0;
+}
+
+.blog-posts .blog-list {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.blog-posts .blog-list article {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--green);
+}
+
+.blog-posts .blog-list article a {
+  font-weight: 500;
+  color: var(--red);
+  text-decoration: none;
+}
+
+.blog-posts .blog-list article a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.blog-posts article .entry-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-posts article .entry-title a {
+  color: var(--charcoal);
+}
+
+.blog-posts article .entry-title a:hover {
+  color: var(--charcoal);
+}
+
+.blog-posts .author {
+  margin-bottom: 1rem;
+}
+
+.blog-posts .load-more {
+  margin-top: 1rem;
+  max-width: 960px;
+  margin: 2rem auto 0 auto;
+}
+
+/*-----------------------
+    Blog Single
+-----------------------*/
+.blog-single {
+  padding: 70px 0;
+  position: relative;
+  background-color: var(--white);
+}
+
+.blog-single article .entry-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-single article a {
+  font-weight: 500;
+  color: var(--red);
+  text-decoration: none;
+}
+
+.blog-single a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.blog-single .entry-content {
+  margin-top: 1rem;
+}
+
+.blog-single .entry-content h1 {
+  font-size: 2rem;
+}
+
+.blog-single .entry-content h2 {
+  font-size: 1.75rem;
+}
+
+.blog-single .entry-content h3 {
+  font-size: 1.5rem;
+}
+
+.blog-single .entry-content > * + * {
+  margin-top: 1rem;
+}
+
+.blog-single ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.blog-single ul ul {
+  list-style-type: decimal;
+}
+
+.blog-single ul li {
+  margin-top: 0.75rem;
+}
+
+/*-----------------------
+    Search Results
+-----------------------*/
+.search-results {
+  padding: 70px 0;
+  position: relative;
+  background-color: var(--white);
+}
+
+.search-results .search-list {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.search-results .search-list article {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--green);
+}
+
+.search-results .search-list article a {
+  font-weight: 500;
+  color: var(--red);
+  text-decoration: none;
+}
+
+.search-results .search-list article a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.search-results .entry-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.search-results article .entry-title a {
+  color: var(--charcoal);
+}
+
+.search-results article .entry-title a:hover {
+  color: var(--charcoal);
+}
+
 /*-----------------------
     Breadcrumbs 
 -----------------------*/
@@ -3170,10 +3443,10 @@ p {
   margin-top: 0.25rem;
 }
 
-.gform_footer.top_label {
+/* .gform_footer.top_label {
   opacity: 0;
   position: absolute;
-}
+} */
 
 .gform_validation_errors .gform_submission_error {
   display: block;

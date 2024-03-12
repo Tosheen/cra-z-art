@@ -588,6 +588,10 @@ button.filter-products::before {
   margin: 0 auto;
 }
 
+.page-template-template-general-content .page-header {
+  text-align: center;
+}
+
 .page-header {
   max-width: 1400px;
   padding: 30px 20px;
@@ -605,8 +609,25 @@ button.filter-products::before {
   text-decoration: underline;
 }
 
+.woocommerce-MyAccount-navigation {
+  padding: 0.5rem;
+  background-color: rgba(0, 137, 52, 0.8);
+  border-radius: 10px;;
+}
+
 .woocommerce-MyAccount-navigation-link {
-  margin-bottom: 10px;
+  padding: 0.5rem 0;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.woocommerce-MyAccount-navigation-link a {
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
+.woocommerce-MyAccount-navigation-link a:hover {
+  text-decoration: underline !important;
 }
 
 .woocommerce-form-login input:is([type="text"], [type="password"]) {
@@ -642,7 +663,7 @@ button.filter-products::before {
   color: var(--white) !important;
 }
 
-article[class^="post"] {
+/* article[class^="post"] {
   max-width: 1400px;
   padding: 30px 20px;
   margin: 0 auto;
@@ -660,7 +681,7 @@ article[class^="post"] h2 a {
 article[class^="post"] a {
   color: var(--green);
   text-decoration: underline;
-}
+} */
 
 .taxonomy-category_filter-puzzles-data .wcf-shop-wrapper {
   margin-top: 2rem;
@@ -681,6 +702,71 @@ article[class^="post"] a {
   right: 20px;
   width: calc(16% - 0.5rem);
   padding: 0.5rem;
+}
+
+.wc-block-cart-items__row .wc-block-components-product-name {
+  display: block;
+  color: var(--charcoal);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.wc-block-cart-items__row .wc-block-cart-item__remove-link {
+  color: var(--red) !important;
+  text-decoration: underline !important;
+}
+
+.wc-block-cart-items__row .wc-block-cart-item__remove-link:hover {
+  text-decoration: underline !important;
+}
+
+.wc-block-components-totals-coupon .wc-block-components-totals-coupon-link,
+.wc-block-components-totals-shipping .wc-block-components-totals-shipping__change-address__link {
+  color: var(--green);
+}
+
+.wc-block-components-totals-coupon .wc-block-components-totals-coupon-link:hover,
+.wc-block-components-totals-shipping .wc-block-components-totals-shipping__change-address__link:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.wc-block-cart__submit {
+  margin-top: 1rem !important;
+}
+
+.wc-block-cart__submit .wc-block-cart__submit-button,
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button {
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  border-radius: 64px;
+  padding: 16px 32px;
+  transition: color 300ms ease, background-color 300ms ease,
+    border-color 300ms ease !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white);
+  cursor: pointer;
+  background: var(--green);
+  color: var(--white);
+  min-height: auto;
+}
+
+.wc-block-cart__submit .wc-block-cart__submit-button:hover,
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover {
+  background-color: var(--white);
+  color: var(--green);
+  border: 1px solid var(--green)
+}
+
+.wp-block-woocommerce-checkout {
+  padding: 40px 1rem;
+  max-width: 1400px;
+  margin: 0 auto !important;
 }
 
 @media screen and (min-width: 600px) {
