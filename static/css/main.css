@@ -1042,6 +1042,62 @@ p {
 }
 
 /*-----------------------
+    Hero Simple
+-----------------------*/
+.hero-simple {
+  position: relative;
+}
+
+.hero-simple a {
+  display: block;
+  width: 100%;
+}
+
+.hero-simple a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-simple a img:nth-child(2) {
+  display: none;
+}
+
+.hero-simple .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-simple .slick-arrow.slick-prev {
+  left: 10px;
+}
+
+.hero-simple .slick-arrow.slick-next {
+  right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-simple a img:nth-child(1) {
+    display: none;
+  }
+
+  .hero-simple a img:nth-child(2) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero-simple .slick-arrow.slick-prev {
+    left: 56px;
+  }
+
+  .hero-simple .slick-arrow.slick-next {
+    right: 56px;
+  }
+}
+
+/*-----------------------
     Shop By Category
 -----------------------*/
 .shop-by-category {
