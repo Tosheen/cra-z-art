@@ -229,6 +229,16 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $heroSimple = jQuery("#hero-simple");
+
+  if ($heroSimple.length === 1) {
+    $heroSimple.slick({
+      autoplay: true,
+      autoplaySpeed: 8000,
+      arrows: true,
+    });
+  }
+
   const $roseArtProducts = jQuery("#rose-art-products");
 
   if ($roseArtProducts.length === 1) {
