@@ -1159,6 +1159,11 @@ p {
   justify-content: center;
 }
 
+.shop-by-category .see-all-categories {
+  text-align: center;
+  margin-top: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .shop-by-category .categories {
     max-width: 100%;
@@ -2066,12 +2071,11 @@ p {
 .our-story {
   padding: 100px 0 320px 0;
   background-color: var(--light-blue);
-  background-image: url("../images/our-story/decor-01-sm.png"),
-    url("../images/our-story/decor-02-sm.png"),
-    url("../images/our-story/bckg-sm.png");
+  background-image:
+    url("../images/our-story/bckg-sm.jpg");
   background-repeat: no-repeat;
-  background-size: auto, auto, cover;
-  background-position: right bottom, left bottom, center center;
+  background-size: cover;
+  background-position: center;
   color: var(--white);
   text-align: center;
 }
@@ -2089,15 +2093,23 @@ p {
   max-width: 400px;
 }
 
+.our-story .artboard {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.our-story .artboard img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 768px) {
   .our-story {
     padding: 114px 0;
-    background-image: url("../images/our-story/decor-01-lg.png"),
-      url("../images/our-story/decor-02-lg.png"),
-      url("../images/our-story/bckg-lg.png");
+    background-image: url("../images/our-story/bckg-lg.jpg");
     background-repeat: no-repeat;
-    background-size: auto, auto, cover;
-    background-position: right bottom, left bottom, center center;
   }
 
   .our-story p {
@@ -2108,6 +2120,26 @@ p {
 
   .our-story .action-button {
     max-width: 200px;
+  }
+
+  .our-story .artboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .our-story .artboard > div:nth-child(1),
+  .our-story .artboard > div:nth-child(3) {
+    width: 22%;
+    max-width: 22%;
+    flex: 0 0 22%;
+  }
+
+  .our-story .artboard > div:nth-child(2) {
+    width: 32%;
+    max-width: 32%;
+    flex: 0 0 32%;
   }
 }
 
