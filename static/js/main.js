@@ -429,6 +429,15 @@ jQuery(document).ready(function () {
     }
   });
 
+  jQuery(".reveal-all-filters button").on("click", function () {
+    const $revealWrapper = jQuery(this).parent();
+    $revealWrapper
+      .prev(".filter-items")
+      .find(".filter-list")
+      .addClass("revealed");
+    $revealWrapper.addClass("hide");
+  });
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
