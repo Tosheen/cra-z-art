@@ -700,9 +700,10 @@ article[class^="post"] a {
   position: relative;
 }
 
+/*
 .taxonomy-category_filter-puzzles-data .products {
   max-width: 1000px;
-}
+}*/
 
 .taxonomy-category_filter-puzzles-data .sidebar-filters {
   display: none;
