@@ -1830,10 +1830,10 @@ p {
 .popular-by-age {
   padding: 75px 0 135px 0;
   background-color: var(--yellow);
-  background-image: url("../images/popular-by-age/bckg.png");
-  background-repeat: no-repeat;
-  background-size: 90% auto;
-  background-position: bottom center;
+  background-image: url("../images/popular-by-age/markers.png"), url("../images/popular-by-age/overlay.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto auto, cover;
+  background-position: bottom center, center center;
 }
 
 .popular-by-age h3 {
@@ -1887,8 +1887,7 @@ p {
 @media screen and (min-width: 1025px) {
   .popular-by-age {
     padding: 120px 0 112px 0;
-    background-repeat: no-repeat;
-    background-size: auto auto;
+    background-repeat: repeat-x, no-repeat;
   }
 
   .age-products {
@@ -1901,11 +1900,11 @@ p {
 -----------------------*/
 .on-the-blog {
   padding: 100px 0;
-  background-color: var(--green);
-  background-image: url("../images/on-the-blog/rainbow.png");
+  background-color: var(--light-blue);
+  background-image: url("../images/on-the-blog/news-rainbow.png");
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position: left center;
+  background-size: auto 100%;
+  background-position: center center;
 }
 
 .on-the-blog h3 {
@@ -2022,13 +2021,6 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .on-the-blog {
-    background-image: url("../images/on-the-blog/bckg-01.png"),
-      url("../images/on-the-blog/bckg-02.png");
-    background-size: auto;
-    background-position: left 125px bottom, right 125px bottom;
-  }
-
   .on-the-blog h3 {
     text-align: left;
     margin-bottom: 0;
@@ -2060,6 +2052,10 @@ p {
 }
 
 @media screen and (min-width: 1025px) {
+  .on-the-blog {
+    background-size: auto auto;
+  }
+
   .blog-items {
     grid-template-columns: repeat(4, 1fr);
   }
