@@ -48,7 +48,7 @@ header.mobile {
   width: 100%;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.mobile .top-nav {
@@ -231,7 +231,7 @@ header.mobile .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-    center / 100% auto;
+  center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -298,7 +298,7 @@ header.mobile .sub-menu.obscure {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-left.svg") no-repeat center
-    center / 100% auto;
+  center / 100% auto;
   position: absolute;
   left: 0;
   top: 50%;
@@ -323,7 +323,7 @@ header.desktop {
   background-position: center -1vw;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.desktop .top-nav {
@@ -368,7 +368,7 @@ header.desktop .navigation-items .menu-item-has-children a::after {
   width: 1rem;
   height: 1rem;
   background: url("../images/icons/black-arrow-down.svg") no-repeat center
-    center / 100% 100%;
+  center / 100% 100%;
   top: 2px;
   right: 0;
 }
@@ -420,7 +420,7 @@ header.desktop .search-products {
   top: 148px;
   padding: 28px 56px 40px 56px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04) inset,
-    88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
+  88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
   display: none;
   z-index: 50;
   background-color: var(--white);
@@ -500,7 +500,7 @@ header.desktop nav > .nav-menu > .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-    center / 100% auto;
+  center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -549,7 +549,7 @@ header .best-selllers .items {
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 16px;
@@ -804,7 +804,7 @@ footer.main .products-mini-slider .item img {
 @media screen and (min-width: 1025px) {
   footer.main {
     background-image: url("../images/footer-desktop-bckg.png"),
-      url("../images/rainbow.png");
+    url("../images/rainbow.png");
     background-position: center bottom -20px, right top;
     background-size: 100% auto, auto auto;
   }
@@ -1103,7 +1103,7 @@ p {
 .shop-by-category {
   padding: 95px 0;
   background: var(--light-blue) url("../images/category/bckg.jpg") no-repeat
-    center top / cover;
+  center top / cover;
 }
 
 .shop-by-category h3 {
@@ -1140,7 +1140,7 @@ p {
   width: 100%;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   transition: transform 500ms ease;
 }
@@ -1191,7 +1191,7 @@ p {
 .our-top-brands {
   padding: 70px 0;
   background: var(--light-blue) url("../images/brands/bckg.jpg") no-repeat
-    center top / cover;
+  center top / cover;
   text-align: center;
 }
 
@@ -1362,7 +1362,7 @@ p {
   text-align: center;
   background: var(--charcoal);
   background-image: url("../images/rose-art/decoration-left.png"),
-    url("../images/rose-art/decoration-right.png");
+  url("../images/rose-art/decoration-right.png");
   background-repeat: no-repeat;
   background-size: 180px auto, 136px auto;
   background-position: left top, right top;
@@ -1508,7 +1508,7 @@ p {
   padding: 160px 0 192px 0;
   background-color: var(--light-blue);
   background-image: url("../images/our-community/crayons.png"),
-    url("../images/our-community/bckg.png");
+  url("../images/our-community/bckg.png");
   background-repeat: repeat-x, no-repeat;
   background-size: auto auto, cover;
   background-position: left bottom, center center;
@@ -1535,7 +1535,7 @@ p {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
 .community-reviews .product .image {
@@ -1641,7 +1641,7 @@ p {
   background-size: 100% auto, cover;
   background-position: left bottom, left top;
   background-image: url("../images/best-sellers/bckg.png"),
-    linear-gradient(180deg, #3acfff 0%, #beefff 100%);
+  linear-gradient(180deg, #3acfff 0%, #beefff 100%);
 }
 
 .our-best-sellers h3 {
@@ -1659,7 +1659,7 @@ p {
 .product-items .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   background-color: var(--white);
   overflow: hidden;
   text-align: center;
@@ -1773,7 +1773,7 @@ p {
 .you-may-also-like {
   padding: 95px 0 110px 0;
   background: var(--light-blue) url("../images/items-bckg.png") no-repeat center
-    top / cover;
+  top / cover;
 }
 
 .you-may-also-like h3 {
@@ -1850,7 +1850,7 @@ p {
 .age-products .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
   transition: transform 400ms ease;
@@ -1921,7 +1921,7 @@ p {
   margin: 0 8px;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 
@@ -2068,7 +2068,7 @@ p {
   padding: 100px 0 320px 0;
   background-color: var(--light-blue);
   background-image:
-    url("../images/our-story/bckg-sm.jpg");
+          url("../images/our-story/bckg-sm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2492,7 +2492,7 @@ p {
 .product-videos {
   padding: 100px 0 180px 0;
   background: var(--yellow) url("../images/products/bckg.png") no-repeat center
-    center / auto;
+  center / auto;
   text-align: center;
 }
 
@@ -2816,9 +2816,9 @@ p {
   background: var(--white);
   border-radius: 2px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
-    88px 87px 124px 0px rgba(0, 0, 0, 0.09),
-    199px 195px 167px 0px rgba(0, 0, 0, 0.05),
-    354px 346px 198px 0px rgba(0, 0, 0, 0.01);
+  88px 87px 124px 0px rgba(0, 0, 0, 0.09),
+  199px 195px 167px 0px rgba(0, 0, 0, 0.05),
+  354px 346px 198px 0px rgba(0, 0, 0, 0.01);
   font-size: 1rem;
   font-weight: 70;
   line-height: 1.42;
@@ -2964,13 +2964,13 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-    border-color 300ms ease;
+  border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.08),
-    44px 44px 64px 0px rgba(0, 0, 0, 0.04);
+  44px 44px 64px 0px rgba(0, 0, 0, 0.04);
 }
 
 .action-button.primary {
@@ -3081,7 +3081,7 @@ p {
   padding: 16px 40px 16px 16px;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
   gap: 16px;
   width: 100%;
@@ -3270,7 +3270,7 @@ p {
 }
 
 .general-content-wrapper
-  :is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
+:is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
   display: block;
   width: 100%;
   padding: 0.75rem;
@@ -3285,7 +3285,7 @@ p {
 }
 
 .general-content-wrapper
-  :is(input[type="text"], input[type="email"], input[type="tel"], textarea):focus {
+:is(input[type="text"], input[type="email"], input[type="tel"], textarea):focus {
   background-color: #fff;
   border-color: var(--green);
   outline: 0;
@@ -3305,7 +3305,7 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-    border-color 300ms ease;
+  border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
@@ -3490,48 +3490,81 @@ p {
 /*-----------------------
     Search Results
 -----------------------*/
-.search-results {
+div.search-results {
   padding: 70px 0;
   position: relative;
   background-color: var(--white);
 }
 
-.search-results .search-list {
+div.search-results .search-list {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.search-results .search-list article {
+div.search-results .search-list article {
   padding: 1rem 0;
   border-bottom: 1px solid var(--green);
 }
 
-.search-results .search-list article a {
+div.search-results .search-list article a {
   font-weight: 500;
   color: var(--red);
   text-decoration: none;
 }
 
-.search-results .search-list article a:hover {
+div.search-results .search-list article a:hover {
   color: var(--green);
   text-decoration: underline;
 }
 
-.search-results .entry-title {
+div.search-results .entry-title {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.search-results article .entry-title a {
+div.search-results .entry-summary {
+  padding-right: 60px;
+  position: relative;
+}
+
+div.search-results article .entry-title a {
   color: var(--charcoal);
 }
 
-.search-results article .entry-title a:hover {
+div.search-results article .entry-title a:hover {
   color: var(--charcoal);
+}
+
+div.search-results .entry-summary p a:last-child:hover {
+  border-color: var(--green);
+}
+div.search-results .entry-summary p a:last-child {
+  display: block;
+  font-size: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--grey);
+  background: url('../images/icons/green-arrow-right.svg') no-repeat center center / 24px auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border-color 500ms ease;
+}
+
+div.search-results .blog-list article a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+div.search-results .blog-list article a {
+  font-weight: 500;
+  color: var(--red);
+  text-decoration: none;
 }
 
 /*-----------------------
-    Breadcrumbs 
+    Breadcrumbs
 -----------------------*/
 .breadcrumbs {
   padding: 35px 0 30px 0;
