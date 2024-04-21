@@ -438,6 +438,39 @@ jQuery(document).ready(function () {
     $revealWrapper.addClass("hide");
   });
 
+  let currentUrl = window.location.href;
+  const $shopWrapper = jQuery(".wcf-shop-wrapper");
+
+  const pagesToObserve = ["puzzles"];
+
+  const mutationObserver = new MutationObserver((entries) => {
+    const newUrl = window.location.href;
+    const isPageObservable = pagesToObserve.filter((p) =>
+      currentUrl.includes(p)
+    );
+    if (
+      currentUrl != newUrl &&
+      isPageObservable.length > 0 &&
+      $shopWrapper.length === 1
+    ) {
+      jQuery("html, body").animate(
+        {
+          scrollTop: $shopWrapper.offset().top,
+        },
+        800
+      );
+      currentUrl = newUrl;
+    }
+  });
+
+  const productList = document.querySelector("#product-list");
+
+  if (productList != null) {
+    mutationObserver.observe(productList, {
+      childList: true,
+    });
+  }
+
   function debounce(callback, delay) {
     let timeoutID = undefined;
 
