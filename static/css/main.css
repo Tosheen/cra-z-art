@@ -30,6 +30,7 @@ body {
   --light-blue: #00a1df;
   --purple: #982d88;
   --yellow: #ffeb00;
+  --orange: #f7ba38;
 }
 
 .container {
@@ -48,7 +49,7 @@ header.mobile {
   width: 100%;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.mobile .top-nav {
@@ -231,7 +232,7 @@ header.mobile .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -298,7 +299,7 @@ header.mobile .sub-menu.obscure {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-left.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   left: 0;
   top: 50%;
@@ -323,7 +324,7 @@ header.desktop {
   background-position: center -1vw;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.desktop .top-nav {
@@ -368,7 +369,7 @@ header.desktop .navigation-items .menu-item-has-children a::after {
   width: 1rem;
   height: 1rem;
   background: url("../images/icons/black-arrow-down.svg") no-repeat center
-  center / 100% 100%;
+    center / 100% 100%;
   top: 2px;
   right: 0;
 }
@@ -420,7 +421,7 @@ header.desktop .search-products {
   top: 148px;
   padding: 28px 56px 40px 56px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04) inset,
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
   display: none;
   z-index: 50;
   background-color: var(--white);
@@ -500,7 +501,7 @@ header.desktop nav > .nav-menu > .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -549,7 +550,7 @@ header .best-selllers .items {
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 16px;
@@ -804,7 +805,7 @@ footer.main .products-mini-slider .item img {
 @media screen and (min-width: 1025px) {
   footer.main {
     background-image: url("../images/footer-desktop-bckg.png"),
-    url("../images/rainbow.png");
+      url("../images/rainbow.png");
     background-position: center bottom -20px, right top;
     background-size: 100% auto, auto auto;
   }
@@ -1103,7 +1104,7 @@ p {
 .shop-by-category {
   padding: 95px 0;
   background: var(--light-blue) url("../images/category/bckg.jpg") no-repeat
-  center top / cover;
+    center top / cover;
 }
 
 .shop-by-category h3 {
@@ -1140,7 +1141,7 @@ p {
   width: 100%;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   transition: transform 500ms ease;
 }
@@ -1191,7 +1192,7 @@ p {
 .our-top-brands {
   padding: 70px 0;
   background: var(--light-blue) url("../images/brands/bckg.jpg") no-repeat
-  center top / cover;
+    center top / cover;
   text-align: center;
 }
 
@@ -1354,6 +1355,114 @@ p {
 }
 
 /*-----------------------
+    Puzzles Banner
+-----------------------*/
+.puzzles-banner {
+  padding: 80px 0 120px 0;
+  color: var(--white);
+  text-align: center;
+  background: url("../images/puzzles/bckg.png") no-repeat 50% 50% / cover
+    var(--black);
+}
+
+.puzzles-banner h2 {
+  margin-bottom: 24px;
+}
+
+.puzzles-banner p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25rem;
+}
+
+.puzzles-banner .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.puzzles-banner .slick-prev {
+  left: 20px;
+}
+
+.puzzles-banner .slick-next {
+  right: 20px;
+}
+
+.puzzle-products {
+  margin-top: 65px;
+}
+
+.puzzle-products .product a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+}
+
+.puzzle-products .product a:hover {
+  text-decoration: none;
+}
+
+.puzzle-products .product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.puzzle-products .product img:nth-child(2) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .puzzle-products .product img:nth-child(1) {
+    display: none;
+  }
+
+  .puzzle-products .product img:nth-child(2) {
+    display: block;
+  }
+
+  .puzzle-products .product a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: background-color 500ms ease;
+  }
+
+  .puzzle-products .product.slick-current a::after {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .puzzles-banner {
+    padding: 60px 0 120px 0;
+  }
+
+  .puzzles-banner .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .puzzles-banner .slick-prev {
+    left: 56px;
+  }
+
+  .puzzles-banner .slick-next {
+    right: 56px;
+  }
+}
+
+/*-----------------------
     Rose Art Brand
 -----------------------*/
 .rose-art-brand {
@@ -1362,7 +1471,7 @@ p {
   text-align: center;
   background: var(--charcoal);
   background-image: url("../images/rose-art/decoration-left.png"),
-  url("../images/rose-art/decoration-right.png");
+    url("../images/rose-art/decoration-right.png");
   background-repeat: no-repeat;
   background-size: 180px auto, 136px auto;
   background-position: left top, right top;
@@ -1502,13 +1611,290 @@ p {
 }
 
 /*-----------------------
+    Puzzle Finder
+-----------------------*/
+.puzzle-finder .filters {
+  text-align: center;
+  padding: 40px 0 55px 0;
+  background-color: var(--orange);
+}
+
+.puzzle-finder .filters h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.puzzle-finder .filters-list {
+  max-width: 772px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.puzzle-finder .filters-list select {
+  width: 100%;
+  appearance: none;
+  padding: 12px 18px;
+  background-color: var(--white);
+  border-radius: 40px;
+  border: none;
+  color: var(--charcoal);
+  background: url("../images/icons/dropdown-chevron.svg") no-repeat right 16px
+    center / auto var(--white);
+}
+
+.puzzle-finder .filters-list button {
+  display: block;
+  border: none;
+  width: 100%;
+  appearance: none;
+  padding: 11px 18px;
+  background-color: var(--black);
+  border-radius: 40px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--white);
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.puzzle-finder .filters-list button:hover {
+  background-color: var(--white);
+  color: var(--charcoal);
+}
+
+@media screen and (min-width: 768px) {
+  .puzzle-finder .filters-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*-----------------------
+   Shop Puzzles
+-----------------------*/
+.shop-puzzles {
+  padding: 120px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.shop-puzzles h3 {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.shop-puzzles.by-theme {
+  background-image: url("../images/shop-puzzles/by-theme-bckg.jpg");
+}
+
+.shop-puzzles.by-pieces {
+  background-image: url("../images/shop-puzzles/by-pieces-bckg.jpg");
+}
+
+.shop-puzzles.by-type {
+  background-image: url("../images/shop-puzzles/by-type-bckg.jpg");
+}
+
+.shop-puzzles .puzzle-tabs {
+  max-width: 860px;
+  margin: 45px auto 70px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.shop-puzzles .puzzle-tabs button {
+  width: 220px;
+  text-align: center;
+  padding: 18px 0;
+  border-radius: 26px;
+  background-color: var(--white);
+  color: var(--black);
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.shop-puzzles .puzzle-tabs button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  top: 100%;
+  border-top: 16px solid var(--orange);
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.shop-puzzles .puzzle-tabs button:hover,
+.shop-puzzles .puzzle-tabs .active button {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.shop-puzzles .puzzle-tabs button:hover::after,
+.shop-puzzles .puzzle-tabs .active button::after {
+  opacity: 1;
+  transform: translate(-50%, -20%);
+}
+
+.shop-puzzles .puzzles-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 20px;
+}
+
+.shop-puzzles .puzzles-list .item a {
+  display: block;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.shop-puzzles .puzzles-list a,
+.shop-puzzles .pieces-list a {
+  transition: transform 400ms ease;
+}
+
+.shop-puzzles .puzzles-list a:hover,
+.shop-puzzles .pieces-list a:hover {
+  transform: translateY(-20px);
+}
+
+.shop-puzzles .puzzles-list .item .img-wrapper {
+  padding: 20px;
+  background-color: var(--white);
+  position: relative;
+}
+
+.shop-puzzles .type-list .item .img-wrapper {
+  height: 228px;
+}
+
+.shop-puzzles .puzzles-list .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-puzzles .type-list .item .img-wrapper img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop-puzzles .puzzles-list .item h6 {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  height: 65px;
+  padding: 12px;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.shop-puzzles .load-more {
+  margin-top: 80px;
+}
+
+.shop-puzzles .load-more button {
+  width: 220px;
+}
+
+.shop-puzzles .puzzles-list .item:nth-child(n + 9) {
+  display: none;
+}
+
+.shop-puzzles .puzzles-list.reveal .item {
+  display: block !important;
+}
+
+.shop-puzzles .pieces-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 64px 87px;
+}
+
+.shop-puzzles .pieces-list a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.shop-puzzles .pieces-list svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-puzzles .pieces-list h6 {
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.75rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.shop-puzzles .tab-content {
+  display: none;
+}
+
+.shop-puzzles .tab-content.active {
+  display: block;
+}
+
+@media screen and (min-width: 480px) {
+  .shop-puzzles .puzzles-list,
+  .shop-puzzles .pieces-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shop-puzzles .puzzle-tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  .shop-puzzles .puzzles-list,
+  .shop-puzzles .pieces-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*-----------------------
     Our Community
 -----------------------*/
 .our-community {
   padding: 160px 0 192px 0;
   background-color: var(--light-blue);
   background-image: url("../images/our-community/crayons.png"),
-  url("../images/our-community/bckg.png");
+    url("../images/our-community/bckg.png");
   background-repeat: repeat-x, no-repeat;
   background-size: auto auto, cover;
   background-position: left bottom, center center;
@@ -1535,7 +1921,7 @@ p {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
 .community-reviews .product .image {
@@ -1641,7 +2027,7 @@ p {
   background-size: 100% auto, cover;
   background-position: left bottom, left top;
   background-image: url("../images/best-sellers/bckg.png"),
-  linear-gradient(180deg, #3acfff 0%, #beefff 100%);
+    linear-gradient(180deg, #3acfff 0%, #beefff 100%);
 }
 
 .our-best-sellers h3 {
@@ -1659,7 +2045,7 @@ p {
 .product-items .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   background-color: var(--white);
   overflow: hidden;
   text-align: center;
@@ -1773,7 +2159,7 @@ p {
 .you-may-also-like {
   padding: 95px 0 110px 0;
   background: var(--light-blue) url("../images/items-bckg.png") no-repeat center
-  top / cover;
+    top / cover;
 }
 
 .you-may-also-like h3 {
@@ -1830,7 +2216,8 @@ p {
 .popular-by-age {
   padding: 75px 0 135px 0;
   background-color: var(--yellow);
-  background-image: url("../images/popular-by-age/markers.png"), url("../images/popular-by-age/overlay.png");
+  background-image: url("../images/popular-by-age/markers.png"),
+    url("../images/popular-by-age/overlay.png");
   background-repeat: no-repeat, no-repeat;
   background-size: auto auto, cover;
   background-position: bottom center, center center;
@@ -1850,7 +2237,7 @@ p {
 .age-products .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
   transition: transform 400ms ease;
@@ -1921,7 +2308,7 @@ p {
   margin: 0 8px;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 
@@ -2067,8 +2454,7 @@ p {
 .our-story {
   padding: 100px 0 320px 0;
   background-color: var(--light-blue);
-  background-image:
-          url("../images/our-story/bckg-sm.jpg");
+  background-image: url("../images/our-story/bckg-sm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2293,7 +2679,7 @@ p {
   display: block !important;
 }
 
-.filter-list .filter-item:nth-child(n+3) {
+.filter-list .filter-item:nth-child(n + 3) {
   display: none;
 }
 
@@ -2302,11 +2688,11 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .filter-list .filter-item:nth-child(n+3) {
+  .filter-list .filter-item:nth-child(n + 3) {
     display: block;
   }
 
-  .filter-list .filter-item:nth-child(n+4) {
+  .filter-list .filter-item:nth-child(n + 4) {
     display: none;
   }
 }
@@ -2316,12 +2702,11 @@ p {
     grid-template-columns: repeat(5, 1fr);
   }
 
-
-  .filter-list .filter-item:nth-child(n+3) {
+  .filter-list .filter-item:nth-child(n + 3) {
     display: block;
   }
 
-  .filter-list .filter-item:nth-child(n+6) {
+  .filter-list .filter-item:nth-child(n + 6) {
     display: none;
   }
 }
@@ -2492,7 +2877,7 @@ p {
 .product-videos {
   padding: 100px 0 180px 0;
   background: var(--yellow) url("../images/products/bckg.png") no-repeat center
-  center / auto;
+    center / auto;
   text-align: center;
 }
 
@@ -2816,9 +3201,9 @@ p {
   background: var(--white);
   border-radius: 2px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.09),
-  199px 195px 167px 0px rgba(0, 0, 0, 0.05),
-  354px 346px 198px 0px rgba(0, 0, 0, 0.01);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.09),
+    199px 195px 167px 0px rgba(0, 0, 0, 0.05),
+    354px 346px 198px 0px rgba(0, 0, 0, 0.01);
   font-size: 1rem;
   font-weight: 70;
   line-height: 1.42;
@@ -2964,13 +3349,13 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-  border-color 300ms ease;
+    border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.08),
-  44px 44px 64px 0px rgba(0, 0, 0, 0.04);
+    44px 44px 64px 0px rgba(0, 0, 0, 0.04);
 }
 
 .action-button.primary {
@@ -3081,7 +3466,7 @@ p {
   padding: 16px 40px 16px 16px;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
   gap: 16px;
   width: 100%;
@@ -3270,7 +3655,7 @@ p {
 }
 
 .general-content-wrapper
-:is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
+  :is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
   display: block;
   width: 100%;
   padding: 0.75rem;
@@ -3285,7 +3670,12 @@ p {
 }
 
 .general-content-wrapper
-:is(input[type="text"], input[type="email"], input[type="tel"], textarea):focus {
+  :is(
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea
+  ):focus {
   background-color: #fff;
   border-color: var(--green);
   outline: 0;
@@ -3305,7 +3695,7 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-  border-color 300ms ease;
+    border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
@@ -3407,7 +3797,8 @@ p {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--grey);
-  background: url("../images/icons/green-arrow-right.svg") no-repeat center center / 24px auto;
+  background: url("../images/icons/green-arrow-right.svg") no-repeat center
+    center / 24px auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -3545,7 +3936,8 @@ div.search-results .entry-summary p a:last-child {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--grey);
-  background: url('../images/icons/green-arrow-right.svg') no-repeat center center / 24px auto;
+  background: url("../images/icons/green-arrow-right.svg") no-repeat center
+    center / 24px auto;
   position: absolute;
   right: 0;
   top: 50%;

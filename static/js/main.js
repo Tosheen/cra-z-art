@@ -253,6 +253,19 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $puzzleProducts = jQuery("#puzzle-products");
+
+  if ($puzzleProducts.length === 1) {
+    $puzzleProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   const $communityReviews = jQuery("#community-reviews");
 
   if ($communityReviews.length === 1 && isMobile()) {
