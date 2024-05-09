@@ -266,6 +266,20 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $kodakProducts = jQuery("#kodak-products");
+
+  if ($kodakProducts.length === 1) {
+    $kodakProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   const $communityReviews = jQuery("#community-reviews");
 
   if ($communityReviews.length === 1 && isMobile()) {
