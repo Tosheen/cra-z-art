@@ -1679,7 +1679,7 @@ p {
    Shop Puzzles
 -----------------------*/
 .shop-puzzles {
-  padding: 120px 0;
+  padding: 60px 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1691,15 +1691,15 @@ p {
   color: var(--white);
 }
 
-.shop-puzzles.by-theme {
+.shop-puzzles[data-section="by-theme"] {
   background-image: url("../images/shop-puzzles/by-theme-bckg.jpg");
 }
 
-.shop-puzzles.by-pieces {
+.shop-puzzles[data-section="by-pieces"] {
   background-image: url("../images/shop-puzzles/by-pieces-bckg.jpg");
 }
 
-.shop-puzzles.by-type {
+.shop-puzzles[data-section="by-type"] {
   background-image: url("../images/shop-puzzles/by-type-bckg.jpg");
 }
 
@@ -1806,10 +1806,9 @@ p {
 
 .shop-puzzles .puzzles-list .item h6 {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5;
-  height: 65px;
   padding: 12px;
   background-color: var(--orange);
   color: var(--white);
@@ -1817,6 +1816,10 @@ p {
 
 .shop-puzzles .load-more {
   margin-top: 80px;
+}
+
+.shop-puzzles .load-more.obscure {
+  opacity: 0;
 }
 
 .shop-puzzles .load-more button {
@@ -1875,6 +1878,10 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  .shop-puzzles {
+    padding: 120px 0;
+  }
+
   .shop-puzzles .puzzle-tabs {
     display: flex;
     justify-content: space-between;
@@ -1884,6 +1891,11 @@ p {
   .shop-puzzles .puzzles-list,
   .shop-puzzles .pieces-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .shop-puzzles .puzzles-list .item h6 {
+    font-size: 1.5rem;
+    height: 65px;
   }
 }
 
@@ -2084,6 +2096,11 @@ p {
   font-weight: 400;
 }
 
+.product-items .product .info .price {
+  color: var(--green);
+  font-size: 1.25rem;
+}
+
 .product-items .product .info .brand,
 .product-items .product .info .price {
   display: block;
@@ -2150,6 +2167,85 @@ p {
   .our-best-sellers .shop-all {
     margin: 25px auto 0 auto;
     max-width: 240px;
+  }
+}
+
+/*-----------------------
+    Puzzle Best Sellers
+-----------------------*/
+.puzzle-best-sellers {
+  padding: 120px 0;
+  background-image: linear-gradient(118deg, #F25BA5 0.71%, #CE2B9B 50.97%, #85008C 101.24%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.puzzle-best-sellers h3 {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.puzzle-best-seller-products .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.puzzle-best-seller-products .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.puzzle-best-seller-products .slick-prev {
+  left: 20px;
+}
+
+.puzzle-best-seller-products .slick-next {
+  right: 20px;
+}
+
+.puzzle-best-seller-products .product {
+  margin: 0 8px;
+}
+
+.puzzle-best-seller-products .product .img-wrapper {
+  aspect-ratio: 1 / 0.8;
+}
+
+.puzzle-best-seller-products .product .info h6 {
+  min-height: 37px;
+}
+
+.puzzle-best-sellers .shop-all {
+  max-width: 220px;
+  margin: 110px auto 0 auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .puzzle-best-seller-products .compact-dots {
+    display: none;
+  }
+
+  .puzzle-best-seller-products .slick-prev {
+    left: auto;
+    right: 124px;
+    top: auto;
+    bottom: calc(100% + 55px);
+  }
+
+  .puzzle-best-seller-products .slick-next {
+    right: 56px;
+    top: auto;
+    bottom: calc(100% + 55px);
+  }
+
+  .puzzle-best-sellers .shop-all {
+    margin-top: 70px;
   }
 }
 
@@ -3403,6 +3499,18 @@ p {
 .action-button.quaternary:active {
   background-color: var(--green);
   color: var(--white);
+}
+
+.action-button.quinary {
+  background: var(--orange);
+  color: var(--white);
+  border: 1px solid var(--orange);
+}
+
+.action-button.quinary:hover,
+.action-button.quinary:active {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .action-button.full-width {

@@ -296,6 +296,48 @@ jQuery(document).ready(function () {
     });
   }
 
+  const bestSellerResponsiveBreakpoints = [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        initialSlide: 0,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+        dots: false,
+        initialSlide: 1,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        dots: false,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 5,
+        dots: false,
+        initialSlide: 3,
+      },
+    },
+    {
+      breakpoint: 2200,
+      settings: {
+        slidesToShow: 6,
+        dots: false,
+        initialSlide: 4,
+      },
+    },
+  ];
+
   const $bestSellers = jQuery("#best-seller-products");
 
   if ($bestSellers.length === 1) {
@@ -310,47 +352,25 @@ jQuery(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       mobileFirst: true,
-      responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            initialSlide: 0,
-          },
-        },
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 3,
-            dots: false,
-            initialSlide: 1,
-          },
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            dots: false,
-            initialSlide: 2,
-          },
-        },
-        {
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 5,
-            dots: false,
-            initialSlide: 3,
-          },
-        },
-        {
-          breakpoint: 2200,
-          settings: {
-            slidesToShow: 6,
-            dots: false,
-            initialSlide: 4,
-          },
-        },
-      ],
+      responsive: bestSellerResponsiveBreakpoints,
+    });
+  }
+
+  const $puzzleBestSellers = jQuery("#puzzle-best-seller-products");
+
+  if ($puzzleBestSellers.length === 1) {
+    $puzzleBestSellers.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: "28px",
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      responsive: bestSellerResponsiveBreakpoints,
     });
   }
 
@@ -449,6 +469,32 @@ jQuery(document).ready(function () {
       .find(".filter-list")
       .addClass("revealed");
     $revealWrapper.addClass("hide");
+  });
+
+  jQuery(".puzzle-tabs button").on("click", function () {
+    const $button = jQuery(this);
+    const $tab = $button.parent();
+    const $tabs = $tab.parent();
+    const section = $button.data("section");
+    const $shopPuzzles = $tab.closest("#shop-puzzles");
+
+    if ($tab.hasClass("active") === false) {
+      $shopPuzzles
+        .find(".tab-content")
+        .removeClass("active")
+        .end()
+        .find(`.tab-content[data-section="${section}"]`)
+        .addClass("active");
+      $tabs.find("li").removeClass("active");
+      $tab.addClass("active");
+      $shopPuzzles.attr("data-section", section);
+    }
+  });
+
+  jQuery(".shop-puzzles .load-more button").on("click", function () {
+    const $loadMore = jQuery(this).parent();
+    $loadMore.prev("div").addClass("reveal");
+    $loadMore.addClass("obscure");
   });
 
   let currentUrl = window.location.href;

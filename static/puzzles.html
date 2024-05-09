@@ -506,11 +506,11 @@
         </div>
       </div>
     </div>
-    <div class="shop-puzzles by-type">
+    <div class="shop-puzzles" data-section="by-theme" id="shop-puzzles">
       <div class="container">
         <h3>Shop Puzzles</h3>
         <ul class="puzzle-tabs">
-          <li>
+          <li class="active">
             <button type="button" data-section="by-theme">Shop by theme</button>
           </li>
           <li>
@@ -518,12 +518,12 @@
               Shop by pieces
             </button>
           </li>
-          <li class="active">
+          <li>
             <button type="button" data-section="by-type">Shop by type</button>
           </li>
         </ul>
         <div class="tabs-content">
-          <div class="tab-content" data-section="by-theme">
+          <div class="tab-content active" data-section="by-theme">
             <div class="puzzles-list">
               <div class="item">
                 <a href="#">
@@ -533,7 +533,7 @@
                       alt="Americana"
                     />
                   </div>
-                  <h6 style="background-color: #85008C;">Americana</h6>
+                  <h6 style="background-color: #85008c">Americana</h6>
                 </a>
               </div>
               <div class="item">
@@ -544,7 +544,7 @@
                       alt="Animals"
                     />
                   </div>
-                  <h6 style="background-color: #F88730;">Animals</h6>
+                  <h6 style="background-color: #f88730">Animals</h6>
                 </a>
               </div>
               <div class="item">
@@ -555,7 +555,7 @@
                       alt="Birds"
                     />
                   </div>
-                  <h6 style="background-color: #3BA49F;">Birds</h6>
+                  <h6 style="background-color: #3ba49f">Birds</h6>
                 </a>
               </div>
               <div class="item">
@@ -566,7 +566,7 @@
                       alt="Cartoons"
                     />
                   </div>
-                  <h6 style="background-color: #C4047E;">Cartoons</h6>
+                  <h6 style="background-color: #c4047e">Cartoons</h6>
                 </a>
               </div>
               <div class="item">
@@ -577,7 +577,9 @@
                       alt="Collections/Collages"
                     />
                   </div>
-                  <h6 style="background-color: #F7BA38;">Collections/Collages</h6>
+                  <h6 style="background-color: #f7ba38">
+                    Collections/Collages
+                  </h6>
                 </a>
               </div>
               <div class="item">
@@ -588,7 +590,7 @@
                       alt="Cottages/Cabins"
                     />
                   </div>
-                  <h6 style="background-color: #00AEDE;">Cottages/Cabins</h6>
+                  <h6 style="background-color: #00aede">Cottages/Cabins</h6>
                 </a>
               </div>
               <div class="item">
@@ -599,7 +601,7 @@
                       alt="Country/Rural"
                     />
                   </div>
-                  <h6 style="background-color: #C73332;">Country/Rural</h6>
+                  <h6 style="background-color: #c73332">Country/Rural</h6>
                 </a>
               </div>
               <div class="item">
@@ -610,12 +612,12 @@
                       alt="Cultural/Religious"
                     />
                   </div>
-                  <h6 style="background-color: #49228A;">Cultural/Religious</h6>
+                  <h6 style="background-color: #49228a">Cultural/Religious</h6>
                 </a>
               </div>
             </div>
             <div class="load-more">
-                <button class="action-button primary">View all</button>
+              <button class="action-button primary">View all</button>
             </div>
           </div>
           <div class="tab-content" data-section="by-pieces">
@@ -849,17 +851,14 @@
               <button class="action-button primary">View all</button>
             </div>
           </div>
-          <div class="tab-content active" data-section="by-type">
+          <div class="tab-content" data-section="by-type">
             <div class="puzzles-list type-list">
               <div class="item">
                 <a href="#">
                   <div class="img-wrapper">
-                    <img
-                      src="images/shop-puzzles/by-type-01.png"
-                      alt="Cork"
-                    />
+                    <img src="images/shop-puzzles/by-type-01.png" alt="Cork" />
                   </div>
-                  <h6 style="background-color: #49228A;">Cork</h6>
+                  <h6 style="background-color: #49228a">Cork</h6>
                 </a>
               </div>
               <div class="item">
@@ -870,7 +869,7 @@
                       alt="Light Up"
                     />
                   </div>
-                  <h6 style="background-color: #F88730;">Light Up</h6>
+                  <h6 style="background-color: #f88730">Light Up</h6>
                 </a>
               </div>
               <div class="item">
@@ -881,7 +880,7 @@
                       alt="Multipack"
                     />
                   </div>
-                  <h6 style="background-color: #00AEDE;">Multipack</h6>
+                  <h6 style="background-color: #00aede">Multipack</h6>
                 </a>
               </div>
               <div class="item">
@@ -892,7 +891,7 @@
                       alt="Puzzle Party"
                     />
                   </div>
-                  <h6 style="background-color: #C4047E;">Puzzle Party</h6>
+                  <h6 style="background-color: #c4047e">Puzzle Party</h6>
                 </a>
               </div>
               <div class="item">
@@ -903,7 +902,7 @@
                       alt="Mini Shaped"
                     />
                   </div>
-                  <h6 style="background-color: #85008C;">Mini Shaped</h6>
+                  <h6 style="background-color: #85008c">Mini Shaped</h6>
                 </a>
               </div>
               <div class="item">
@@ -914,7 +913,7 @@
                       alt="Soft Touch"
                     />
                   </div>
-                  <h6 style="background-color: #002D86;">Soft Touch</h6>
+                  <h6 style="background-color: #002d86">Soft Touch</h6>
                 </a>
               </div>
               <div class="item">
@@ -925,25 +924,147 @@
                       alt="Accessories"
                     />
                   </div>
-                  <h6 style="background-color: #F7BA38;">Accessories</h6>
+                  <h6 style="background-color: #f7ba38">Accessories</h6>
                 </a>
               </div>
               <div class="item">
                 <a href="#">
                   <div class="img-wrapper">
-                    <img
-                      src="images/shop-puzzles/by-type-08.png"
-                      alt="Sale"
-                    />
+                    <img src="images/shop-puzzles/by-type-08.png" alt="Sale" />
                   </div>
-                  <h6 style="background-color: #C73332;">Sale</h6>
+                  <h6 style="background-color: #c73332">Sale</h6>
                 </a>
               </div>
             </div>
             <div class="load-more">
-                <button class="action-button primary">View all</button>
+              <button class="action-button primary">View all</button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="puzzle-best-sellers">
+      <div class="container">
+        <h3>Best Sellers</h3>
+      </div>
+      <div
+        class="puzzle-best-seller-products product-items"
+        id="puzzle-best-seller-products"
+      >
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-01.jpg"
+              alt="RoseArt - Puzzle Glue - 4.5 ozs"
+            />
+          </div>
+          <div class="info">
+            <h6>RoseArt - Puzzle Glue - 4.5 ozs</h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$4.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-02.jpg"
+              alt="RoseArt - Peanuts 12 Multi-Shaped - Peanuts - 500 Piece Jigsaw Puzzle"
+            />
+          </div>
+          <div class="info">
+            <h6>
+              RoseArt - Peanuts 12 Multi-Shaped - Peanuts - 500 Piece Jigsaw
+              Puzzle
+            </h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$12.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-03.jpg"
+              alt="RoseArt - Back to the Past - Baking with Mom - 1000 Piece Jigsaw Puzzle"
+            />
+          </div>
+          <div class="info">
+            <h6>
+              RoseArt - Back to the Past - Baking with Mom - 1000 Piece Jigsaw
+              Puzzle
+            </h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$10.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-04.jpg"
+              alt="The Real Cotton Candy Maker"
+            />
+          </div>
+          <div class="info">
+            <h6>RoseArt - My Happy Place - Van Life, The Grand Tetons - 750 Piece Jigsaw Puzzle</h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$10.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-01.jpg"
+              alt="RoseArt - Puzzle Glue - 4.5 ozs"
+            />
+          </div>
+          <div class="info">
+            <h6>RoseArt - Puzzle Glue - 4.5 ozs</h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$4.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-02.jpg"
+              alt="RoseArt - Peanuts 12 Multi-Shaped - Peanuts - 500 Piece Jigsaw Puzzle"
+            />
+          </div>
+          <div class="info">
+            <h6>
+              RoseArt - Peanuts 12 Multi-Shaped - Peanuts - 500 Piece Jigsaw
+              Puzzle
+            </h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$12.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <div class="img-wrapper">
+            <img
+              src="images/shop-puzzles/best-seller-03.jpg"
+              alt="RoseArt - Back to the Past - Baking with Mom - 1000 Piece Jigsaw Puzzle"
+            />
+          </div>
+          <div class="info">
+            <h6>
+              RoseArt - Back to the Past - Baking with Mom - 1000 Piece Jigsaw
+              Puzzle
+            </h6>
+            <p class="brand">RoseArt</p>
+            <span class="price">$10.99</span>
+            <button class="action-button tertiary">Shop Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="shop-all">
+          <a href="#" class="action-button quinary full-width">Shop best-sellers</a>
         </div>
       </div>
     </div>
