@@ -513,6 +513,21 @@ jQuery(document).ready(function () {
     $loadMore.addClass("obscure");
   });
 
+  const $artistDialog = jQuery("#artists-dialog");
+  jQuery(".artists-list .artist a").on("click", function (event) {
+    event.preventDefault();
+
+    const $artist = jQuery(this).parent().clone();
+    $artistDialog.find(".info").empty().append($artist);
+
+    jQuery.magnificPopup.open({
+      type: "inline",
+      items: {
+        src: "#artists-dialog",
+      },
+    });
+  });
+
   let currentUrl = window.location.href;
   const $shopWrapper = jQuery(".wcf-shop-wrapper");
 

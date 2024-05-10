@@ -31,7 +31,7 @@ body {
   --purple: #982d88;
   --yellow: #ffeb00;
   --orange: #f7ba38;
-  --alto: #D9D9D9;
+  --alto: #d9d9d9;
 }
 
 .container {
@@ -1748,7 +1748,7 @@ p {
     width: 391px;
     height: 481px;
   }
-  
+
   .kodak-brand::after {
     width: 390px;
     height: 504px;
@@ -3470,6 +3470,165 @@ p {
 
   .collection-banner p {
     font-size: 1.5rem;
+  }
+}
+
+/*-----------------------
+    Meet our artists
+-----------------------*/
+.meet-our-artists {
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-image: url("../images/artists/shadow-04.png"),
+    url("../images/artists/shadow-03.png"),
+    radial-gradient(50% 62.5% at 50% 50%, #c30000 34.5%, #000 100%);
+  background-size: 150px auto, 150px auto, cover;
+  background-position: left top, right bottom, center center;
+  background-blend-mode: soft-light;
+  text-align: center;
+  position: relative;
+}
+
+.meet-our-artists h3 {
+  color: var(--white);
+  margin-bottom: 50px;
+}
+
+.meet-our-artists .artists-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 60px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.artist a {
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.artist h6 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--white);
+  margin: 0;
+}
+
+.artist .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.artist .img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: url("../images/icons/white-plus.svg") no-repeat center center rgba(0, 0, 0, 0.70);
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.artist a:hover .img-wrapper::after {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.artist .img-wrapper img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.artist .position {
+  display: none;
+  font-weight: 900;
+  color: var(--green);
+  margin: 10px 0 20px 0;
+}
+
+.artist .description {
+  display: none;
+  color: var(--charcoal);
+}
+
+.artist .description p + p {
+  margin-top: 20px;
+}
+
+.artists-dialog {
+  background-color: white;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.artists-dialog .artist h6 {
+  color: var(--charcoal);
+}
+
+.artists-dialog .artist a {
+  pointer-events: none;
+}
+
+.artists-dialog .artist .position {
+  display: block;
+}
+
+.artists-dialog .artist .description {
+  text-align: left;
+  display: block;
+}
+
+.artists-dialog .artist .img-wrapper::after {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .meet-our-artists .artists-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .artist h6 {
+    font-size: 1.625rem;
+  }
+
+  .meet-our-artists .artists-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .artists-dialog {
+    padding: 50px 36px 36px 36px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .meet-our-artists {
+    background-size: 600px 622px, 599px 727px, cover;
+  }
+
+  .meet-our-artists .artists-list {
+    gap: 60px 110px;
   }
 }
 
