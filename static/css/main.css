@@ -321,7 +321,7 @@ header.desktop {
   position: relative;
   background-image: url("../images/header-desktop-bckg.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 88px; /* 100% auto */
   background-position: center -1vw;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
@@ -3531,7 +3531,8 @@ p {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: url("../images/icons/white-plus.svg") no-repeat center center rgba(0, 0, 0, 0.70);
+  background: url("../images/icons/white-plus.svg") no-repeat center center
+    rgba(0, 0, 0, 0.7);
   z-index: 5;
   opacity: 0;
   transform: translateY(-100%);
@@ -3629,6 +3630,25 @@ p {
 
   .meet-our-artists .artists-list {
     gap: 60px 110px;
+  }
+}
+
+/*-----------------------
+    Roseart Instagram Puzzles
+-----------------------*/
+.roseart-instagram-puzzles {
+  padding: 60px 0;
+  background-color: var(--black);
+}
+
+.roseart-instagram-puzzles h3 {
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  .roseart-instagram-puzzles {
+    padding: 100px 0;
   }
 }
 
@@ -3965,8 +3985,8 @@ p {
 }
 
 .quick-buy .product-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
 }
 
@@ -4030,6 +4050,11 @@ p {
 
   .compact-dots li {
     width: 60px;
+  }
+
+  .quick-buy .product-image {
+    width: 80px;
+    height: 80px;
   }
 }
 
