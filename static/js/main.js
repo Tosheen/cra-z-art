@@ -370,21 +370,23 @@ jQuery(document).ready(function () {
     });
   }
 
-  const $puzzleBestSellers = jQuery("#puzzle-best-seller-products");
+  const $productsStackItems = jQuery(".products-stack-items");
 
-  if ($puzzleBestSellers.length === 1) {
-    $puzzleBestSellers.slick({
-      autoplay: false,
-      arrows: true,
-      dots: true,
-      dotsClass: "compact-dots",
-      centerMode: true,
-      centerPadding: "28px",
-      infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      mobileFirst: true,
-      responsive: bestSellerResponsiveBreakpoints,
+  if ($productsStackItems.length > 0) {
+    $productsStackItems.each(function () {
+      jQuery(this).slick({
+        autoplay: false,
+        arrows: true,
+        dots: true,
+        dotsClass: "compact-dots",
+        centerMode: true,
+        centerPadding: "28px",
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        responsive: bestSellerResponsiveBreakpoints,
+      });
     });
   }
 
