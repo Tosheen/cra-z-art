@@ -4007,6 +4007,7 @@ p {
 
 .quick-buy .product-info h5 {
   font-weight: 700;
+  font-size: 0.875rem;
 }
 
 .quick-buy .product-info .price {
@@ -4055,6 +4056,10 @@ p {
   .quick-buy .product-image {
     width: 80px;
     height: 80px;
+  }
+
+  .quick-buy .product-info h5 {
+    font-size: 1rem;
   }
 }
 
