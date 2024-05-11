@@ -253,6 +253,33 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $puzzleProducts = jQuery("#puzzle-products");
+
+  if ($puzzleProducts.length === 1) {
+    $puzzleProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
+  const $kodakProducts = jQuery("#kodak-products");
+
+  if ($kodakProducts.length === 1) {
+    $kodakProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   const $communityReviews = jQuery("#community-reviews");
 
   if ($communityReviews.length === 1 && isMobile()) {
@@ -283,6 +310,48 @@ jQuery(document).ready(function () {
     });
   }
 
+  const bestSellerResponsiveBreakpoints = [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        initialSlide: 0,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+        dots: false,
+        initialSlide: 1,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        dots: false,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 5,
+        dots: false,
+        initialSlide: 3,
+      },
+    },
+    {
+      breakpoint: 2200,
+      settings: {
+        slidesToShow: 6,
+        dots: false,
+        initialSlide: 4,
+      },
+    },
+  ];
+
   const $bestSellers = jQuery("#best-seller-products");
 
   if ($bestSellers.length === 1) {
@@ -297,47 +366,27 @@ jQuery(document).ready(function () {
       slidesToShow: 1,
       slidesToScroll: 1,
       mobileFirst: true,
-      responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            initialSlide: 0,
-          },
-        },
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 3,
-            dots: false,
-            initialSlide: 1,
-          },
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            dots: false,
-            initialSlide: 2,
-          },
-        },
-        {
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 5,
-            dots: false,
-            initialSlide: 3,
-          },
-        },
-        {
-          breakpoint: 2200,
-          settings: {
-            slidesToShow: 6,
-            dots: false,
-            initialSlide: 4,
-          },
-        },
-      ],
+      responsive: bestSellerResponsiveBreakpoints,
+    });
+  }
+
+  const $productsStackItems = jQuery(".products-stack-items");
+
+  if ($productsStackItems.length > 0) {
+    $productsStackItems.each(function () {
+      jQuery(this).slick({
+        autoplay: false,
+        arrows: true,
+        dots: true,
+        dotsClass: "compact-dots",
+        centerMode: true,
+        centerPadding: "28px",
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        responsive: bestSellerResponsiveBreakpoints,
+      });
     });
   }
 
@@ -436,6 +485,47 @@ jQuery(document).ready(function () {
       .find(".filter-list")
       .addClass("revealed");
     $revealWrapper.addClass("hide");
+  });
+
+  jQuery(".puzzle-tabs button").on("click", function () {
+    const $button = jQuery(this);
+    const $tab = $button.parent();
+    const $tabs = $tab.parent();
+    const section = $button.data("section");
+    const $shopPuzzles = $tab.closest("#shop-puzzles");
+
+    if ($tab.hasClass("active") === false) {
+      $shopPuzzles
+        .find(".tab-content")
+        .removeClass("active")
+        .end()
+        .find(`.tab-content[data-section="${section}"]`)
+        .addClass("active");
+      $tabs.find("li").removeClass("active");
+      $tab.addClass("active");
+      $shopPuzzles.attr("data-section", section);
+    }
+  });
+
+  jQuery(".shop-puzzles .load-more button").on("click", function () {
+    const $loadMore = jQuery(this).parent();
+    $loadMore.prev("div").addClass("reveal");
+    $loadMore.addClass("obscure");
+  });
+
+  const $artistDialog = jQuery("#artists-dialog");
+  jQuery(".artists-list .artist a").on("click", function (event) {
+    event.preventDefault();
+
+    const $artist = jQuery(this).parent().clone();
+    $artistDialog.find(".info").empty().append($artist);
+
+    jQuery.magnificPopup.open({
+      type: "inline",
+      items: {
+        src: "#artists-dialog",
+      },
+    });
   });
 
   let currentUrl = window.location.href;
