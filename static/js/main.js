@@ -538,11 +538,8 @@ jQuery(document).ready(function () {
     const isPageObservable = pagesToObserve.filter((p) =>
       currentUrl.includes(p)
     );
-    if (
-      currentUrl != newUrl &&
-      isPageObservable.length > 0 &&
-      $shopWrapper.length === 1
-    ) {
+
+    if (currentUrl != newUrl && $shopWrapper.length === 1) {
       jQuery("html, body").animate(
         {
           scrollTop: $shopWrapper.offset().top,
