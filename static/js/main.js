@@ -253,6 +253,33 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $puzzleProducts = jQuery("#puzzle-products");
+
+  if ($puzzleProducts.length === 1) {
+    $puzzleProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
+  const $kodakProducts = jQuery("#kodak-products");
+
+  if ($kodakProducts.length === 1) {
+    $kodakProducts.slick({
+      autoplay: false,
+      arrows: true,
+      dots: true,
+      dotsClass: "compact-dots",
+      centerMode: true,
+      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      infinite: isTabletOrBigger() ? true : false,
+    });
+  }
+
   const $communityReviews = jQuery("#community-reviews");
 
   if ($communityReviews.length === 1 && isMobile()) {
@@ -438,33 +465,38 @@ jQuery(document).ready(function () {
     $revealWrapper.addClass("hide");
   });
 
-    const mutationObserver = new MutationObserver((entries) => {
-        const newUrl = window.location.href;
-        // const isPageObservable = pagesToObserve.filter((p) =>
-        //     currentUrl.includes(p)
-        // );
-        if (
-            currentUrl != newUrl &&
-            // isPageObservable.length > 0 &&
-            $shopWrapper.length === 1
-        ) {
-            jQuery("html, body").animate(
-                {
-                    scrollTop: $shopWrapper.offset().top,
-                },
-                800
-            );
-            currentUrl = newUrl;
-        }
-    });
+  let currentUrl = window.location.href;
+  const $shopWrapper = jQuery(".wcf-shop-wrapper");
 
-    const productList = document.querySelector("#product-list");
+  const pagesToObserve = ["puzzles"];
 
-    if (productList != null) {
-        mutationObserver.observe(productList, {
-            childList: true,
-        });
+  const mutationObserver = new MutationObserver((entries) => {
+    const newUrl = window.location.href;
+    const isPageObservable = pagesToObserve.filter((p) =>
+      currentUrl.includes(p)
+    );
+    if (
+      currentUrl != newUrl &&
+      isPageObservable.length > 0 &&
+      $shopWrapper.length === 1
+    ) {
+      jQuery("html, body").animate(
+        {
+          scrollTop: $shopWrapper.offset().top,
+        },
+        800
+      );
+      currentUrl = newUrl;
     }
+  });
+
+  const productList = document.querySelector("#product-list");
+
+  if (productList != null) {
+    mutationObserver.observe(productList, {
+      childList: true,
+    });
+  }
 
   function debounce(callback, delay) {
     let timeoutID = undefined;

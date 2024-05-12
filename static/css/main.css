@@ -30,6 +30,8 @@ body {
   --light-blue: #00a1df;
   --purple: #982d88;
   --yellow: #ffeb00;
+  --orange: #f7ba38;
+  --alto: #d9d9d9;
 }
 
 .container {
@@ -48,7 +50,7 @@ header.mobile {
   width: 100%;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.mobile .top-nav {
@@ -231,7 +233,7 @@ header.mobile .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -298,7 +300,7 @@ header.mobile .sub-menu.obscure {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-left.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   left: 0;
   top: 50%;
@@ -319,11 +321,11 @@ header.desktop {
   position: relative;
   background-image: url("../images/header-desktop-bckg.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 88px; /* 100% auto */
   background-position: center -1vw;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
 }
 
 header.desktop .top-nav {
@@ -368,7 +370,7 @@ header.desktop .navigation-items .menu-item-has-children a::after {
   width: 1rem;
   height: 1rem;
   background: url("../images/icons/black-arrow-down.svg") no-repeat center
-  center / 100% 100%;
+    center / 100% 100%;
   top: 2px;
   right: 0;
 }
@@ -420,7 +422,7 @@ header.desktop .search-products {
   top: 148px;
   padding: 28px 56px 40px 56px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04) inset,
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04) inset;
   display: none;
   z-index: 50;
   background-color: var(--white);
@@ -500,7 +502,7 @@ header.desktop nav > .nav-menu > .menu-item-has-children::after {
   width: 24px;
   height: 24px;
   background: url("../images/icons/green-arrow-right.svg") no-repeat center
-  center / 100% auto;
+    center / 100% auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -549,7 +551,7 @@ header .best-selllers .items {
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 16px;
@@ -804,7 +806,7 @@ footer.main .products-mini-slider .item img {
 @media screen and (min-width: 1025px) {
   footer.main {
     background-image: url("../images/footer-desktop-bckg.png"),
-    url("../images/rainbow.png");
+      url("../images/rainbow.png");
     background-position: center bottom -20px, right top;
     background-size: 100% auto, auto auto;
   }
@@ -1103,7 +1105,7 @@ p {
 .shop-by-category {
   padding: 95px 0;
   background: var(--light-blue) url("../images/category/bckg.jpg") no-repeat
-  center top / cover;
+    center top / cover;
 }
 
 .shop-by-category h3 {
@@ -1140,7 +1142,7 @@ p {
   width: 100%;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   transition: transform 500ms ease;
 }
@@ -1191,7 +1193,7 @@ p {
 .our-top-brands {
   padding: 70px 0;
   background: var(--light-blue) url("../images/brands/bckg.jpg") no-repeat
-  center top / cover;
+    center top / cover;
   text-align: center;
 }
 
@@ -1354,6 +1356,114 @@ p {
 }
 
 /*-----------------------
+    Puzzles Banner
+-----------------------*/
+.puzzles-banner {
+  padding: 80px 0 120px 0;
+  color: var(--white);
+  text-align: center;
+  background: url("../images/puzzles/bckg.png") no-repeat 50% 50% / cover
+    var(--black);
+}
+
+.puzzles-banner h2 {
+  margin-bottom: 24px;
+}
+
+.puzzles-banner p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25rem;
+}
+
+.puzzles-banner .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.puzzles-banner .slick-prev {
+  left: 20px;
+}
+
+.puzzles-banner .slick-next {
+  right: 20px;
+}
+
+.puzzle-products {
+  margin-top: 65px;
+}
+
+.puzzle-products .product a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+}
+
+.puzzle-products .product a:hover {
+  text-decoration: none;
+}
+
+.puzzle-products .product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.puzzle-products .product img:nth-child(2) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .puzzle-products .product img:nth-child(1) {
+    display: none;
+  }
+
+  .puzzle-products .product img:nth-child(2) {
+    display: block;
+  }
+
+  .puzzle-products .product a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: background-color 500ms ease;
+  }
+
+  .puzzle-products .product.slick-current a::after {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .puzzles-banner {
+    padding: 60px 0 120px 0;
+  }
+
+  .puzzles-banner .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .puzzles-banner .slick-prev {
+    left: 56px;
+  }
+
+  .puzzles-banner .slick-next {
+    right: 56px;
+  }
+}
+
+/*-----------------------
     Rose Art Brand
 -----------------------*/
 .rose-art-brand {
@@ -1362,7 +1472,7 @@ p {
   text-align: center;
   background: var(--charcoal);
   background-image: url("../images/rose-art/decoration-left.png"),
-  url("../images/rose-art/decoration-right.png");
+    url("../images/rose-art/decoration-right.png");
   background-repeat: no-repeat;
   background-size: 180px auto, 136px auto;
   background-position: left top, right top;
@@ -1417,7 +1527,7 @@ p {
   transform: translateX(-50%);
 }
 
-.rose-art-products .quick-buy-wrapper .dot-pulser {
+.quick-buy-wrapper .dot-pulser {
   display: block;
   position: absolute;
   width: 12px;
@@ -1502,13 +1612,483 @@ p {
 }
 
 /*-----------------------
+    Kodak Brand
+-----------------------*/
+.kodak-brand {
+  padding: 100px 0 170px 0;
+  color: var(--black);
+  text-align: center;
+  background: var(--orange);
+  background-image: url("../images/kodak/shadow-01.png"),
+    url("../images/kodak/shadow-02.png");
+  background-repeat: no-repeat;
+  background-size: 180px auto, 136px auto;
+  background-position: left top, right top;
+  background-blend-mode: screen;
+  position: relative;
+}
+
+.kodak-brand::before,
+.kodak-brand::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.kodak-brand::before {
+  left: 0;
+  top: -20px;
+  width: 180px;
+  height: 221px;
+  background-image: url("../images/kodak/decoration-left.png");
+}
+
+.kodak-brand::after {
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 223px;
+  background-image: url("../images/kodak/decoration-right.png");
+}
+
+.kodak-brand .info {
+  margin-bottom: 40px;
+}
+
+.kodak-brand .info img {
+  display: inline-block;
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.kodak-brand h3 {
+  margin-bottom: 10px;
+}
+
+.kodak-brand h3 + p {
+  max-width: 485px;
+  margin: 0 auto;
+}
+
+.kodak-products {
+  margin-bottom: 0 !important;
+}
+
+.kodak-products .product {
+  position: relative;
+  height: 400px;
+  padding: 0 8px;
+  overflow: hidden;
+}
+
+.kodak-products .product > img {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  width: calc(100% - 16px);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.kodak-products .quick-buy-wrapper {
+  position: absolute;
+  z-index: 10;
+  width: calc(100% - 20px);
+  max-width: 320px;
+  left: 50%;
+  bottom: 44px;
+  transform: translateX(-50%);
+}
+
+.kodak-products .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.kodak-products .slick-prev {
+  left: 20px;
+}
+
+.kodak-products .slick-next {
+  right: 20px;
+}
+
+.kodak-products .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.kodak-products .compact-dots button {
+  background-color: var(--white);
+}
+
+.kodak-products .compact-dots li.slick-active button {
+  background-color: var(--alto);
+}
+
+@media screen and (min-width: 1025px) {
+  .kodak-brand {
+    background-size: auto auto, auto auto;
+    position: relative;
+  }
+
+  .kodak-brand::before {
+    top: -50px;
+    width: 391px;
+    height: 481px;
+  }
+
+  .kodak-brand::after {
+    width: 390px;
+    height: 504px;
+  }
+
+  .kodak-brand .info {
+    max-width: 630px;
+    margin: 0 auto 50px auto;
+  }
+
+  .kodak-brand .info img {
+    max-width: 220px;
+  }
+
+  .kodak-products .product {
+    height: 520px;
+  }
+
+  .kodak-products .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .kodak-products .quick-buy-wrapper {
+    left: 200px;
+    transform: none;
+  }
+
+  .kodak-products .compact-dots {
+    top: calc(100% + 40px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .kodak-products .slick-prev {
+    left: 56px;
+  }
+
+  .kodak-products .slick-next {
+    right: 56px;
+  }
+}
+
+/*-----------------------
+    Puzzle Finder
+-----------------------*/
+.puzzle-finder .filters {
+  text-align: center;
+  padding: 40px 0 55px 0;
+  background-color: var(--orange);
+}
+
+.puzzle-finder .filters h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.puzzle-finder .filters-list {
+  max-width: 772px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.puzzle-finder .filters-list select {
+  width: 100%;
+  appearance: none;
+  padding: 12px 18px;
+  background-color: var(--white);
+  border-radius: 40px;
+  border: none;
+  color: var(--charcoal);
+  background: url("../images/icons/dropdown-chevron.svg") no-repeat right 16px
+    center / auto var(--white);
+}
+
+.puzzle-finder .filters-list button {
+  display: block;
+  border: none;
+  width: 100%;
+  appearance: none;
+  padding: 11px 18px;
+  background-color: var(--black);
+  border-radius: 40px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--white);
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.puzzle-finder .filters-list button:hover {
+  background-color: var(--white);
+  color: var(--charcoal);
+}
+
+@media screen and (min-width: 768px) {
+  .puzzle-finder .filters-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*-----------------------
+   Shop Puzzles
+-----------------------*/
+.shop-puzzles {
+  padding: 60px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+
+.shop-puzzles h3 {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.shop-puzzles[data-section="by-theme"] {
+  background-image: url("../images/shop-puzzles/by-theme-bckg.jpg");
+}
+
+.shop-puzzles[data-section="by-pieces"] {
+  background-image: url("../images/shop-puzzles/by-pieces-bckg.jpg");
+}
+
+.shop-puzzles[data-section="by-type"] {
+  background-image: url("../images/shop-puzzles/by-type-bckg.jpg");
+}
+
+.shop-puzzles .puzzle-tabs {
+  max-width: 860px;
+  margin: 45px auto 70px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.shop-puzzles .puzzle-tabs button {
+  width: 220px;
+  text-align: center;
+  padding: 18px 0;
+  border-radius: 26px;
+  background-color: var(--white);
+  color: var(--black);
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.shop-puzzles .puzzle-tabs button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  top: 100%;
+  border-top: 16px solid var(--orange);
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.shop-puzzles .puzzle-tabs button:hover,
+.shop-puzzles .puzzle-tabs .active button {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.shop-puzzles .puzzle-tabs button:hover::after,
+.shop-puzzles .puzzle-tabs .active button::after {
+  opacity: 1;
+  transform: translate(-50%, -20%);
+}
+
+.shop-puzzles .puzzles-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 20px;
+}
+
+.shop-puzzles .puzzles-list .item a {
+  display: block;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.shop-puzzles .puzzles-list a,
+.shop-puzzles .pieces-list a {
+  transition: transform 400ms ease;
+}
+
+.shop-puzzles .puzzles-list a:hover,
+.shop-puzzles .pieces-list a:hover {
+  transform: translateY(-20px);
+}
+
+.shop-puzzles .puzzles-list .item .img-wrapper {
+  padding: 20px;
+  background-color: var(--white);
+  position: relative;
+}
+
+.shop-puzzles .type-list .item .img-wrapper {
+  height: 228px;
+}
+
+.shop-puzzles .puzzles-list .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-puzzles .type-list .item .img-wrapper img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop-puzzles .puzzles-list .item h6 {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 12px;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.shop-puzzles .load-more {
+  margin-top: 80px;
+}
+
+.shop-puzzles .load-more.obscure {
+  opacity: 0;
+}
+
+.shop-puzzles .load-more button {
+  width: 220px;
+}
+
+.shop-puzzles .puzzles-list .item:nth-child(n + 9) {
+  display: none;
+}
+
+.shop-puzzles .puzzles-list.reveal .item {
+  display: block !important;
+}
+
+.shop-puzzles .pieces-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 64px 87px;
+}
+
+.shop-puzzles .pieces-list a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.shop-puzzles .pieces-list svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shop-puzzles .pieces-list h6 {
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.75rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.shop-puzzles .tab-content {
+  display: none;
+}
+
+.shop-puzzles .tab-content.active {
+  display: block;
+}
+
+@media screen and (min-width: 480px) {
+  .shop-puzzles .puzzles-list,
+  .shop-puzzles .pieces-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shop-puzzles {
+    padding: 120px 0;
+  }
+
+  .shop-puzzles .puzzle-tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  .shop-puzzles .puzzles-list,
+  .shop-puzzles .pieces-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .shop-puzzles .puzzles-list .item h6 {
+    font-size: 1.5rem;
+    height: 65px;
+  }
+}
+
+/*-----------------------
     Our Community
 -----------------------*/
 .our-community {
   padding: 160px 0 192px 0;
   background-color: var(--light-blue);
   background-image: url("../images/our-community/crayons.png"),
-  url("../images/our-community/bckg.png");
+    url("../images/our-community/bckg.png");
   background-repeat: repeat-x, no-repeat;
   background-size: auto auto, cover;
   background-position: left bottom, center center;
@@ -1535,7 +2115,7 @@ p {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
 }
 
 .community-reviews .product .image {
@@ -1641,7 +2221,7 @@ p {
   background-size: 100% auto, cover;
   background-position: left bottom, left top;
   background-image: url("../images/best-sellers/bckg.png"),
-  linear-gradient(180deg, #3acfff 0%, #beefff 100%);
+    linear-gradient(180deg, #3acfff 0%, #beefff 100%);
 }
 
 .our-best-sellers h3 {
@@ -1659,7 +2239,7 @@ p {
 .product-items .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   background-color: var(--white);
   overflow: hidden;
   text-align: center;
@@ -1695,7 +2275,13 @@ p {
 }
 
 .product-items .product .info h6 {
+  line-height: 1.5;
   font-weight: 400;
+}
+
+.product-items .product .info .price {
+  color: var(--green);
+  font-size: 1.25rem;
 }
 
 .product-items .product .info .brand,
@@ -1768,12 +2354,112 @@ p {
 }
 
 /*-----------------------
+    Puzzle Best Sellers
+-----------------------*/
+.products-stack {
+  padding: 120px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.products-stack.puzzle-best-sellers {
+  background-image: linear-gradient(
+    118deg,
+    #f25ba5 0.71%,
+    #ce2b9b 50.97%,
+    #85008c 101.24%
+  );
+  background-position: left center;
+}
+
+.products-stack.puzzle-new-releases {
+  background-image: url("../images/puzzles/new-releases-bckg.png");
+  background-position: center center;
+}
+
+.products-stack h3 {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.products-stack-items .compact-dots {
+  position: absolute;
+  top: calc(100% + 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.products-stack-items .slick-arrow {
+  position: absolute;
+  top: calc(100% + 40px);
+  transform: none;
+}
+
+.products-stack-items .slick-prev {
+  left: 20px;
+}
+
+.products-stack-items .slick-next {
+  right: 20px;
+}
+
+.products-stack-items .product {
+  margin: 0 8px;
+}
+
+.products-stack-items .product .img-wrapper {
+  aspect-ratio: 1 / 0.8;
+}
+
+.products-stack-items .product .info h6 {
+  min-height: 48px;
+}
+
+.products-stack .shop-all {
+  max-width: 220px;
+  margin: 110px auto 0 auto;
+}
+
+.products-stack.puzzle-new-releases .shop-all {
+  max-width: 260px;
+}
+
+.puzzle-new-releases .product .info h6 {
+  min-height: 72px;
+}
+
+@media screen and (min-width: 1025px) {
+  .products-stack-items .compact-dots {
+    display: none;
+  }
+
+  .products-stack-items .slick-prev {
+    left: auto;
+    right: 124px;
+    top: auto;
+    bottom: calc(100% + 55px);
+  }
+
+  .products-stack-items .slick-next {
+    right: 56px;
+    top: auto;
+    bottom: calc(100% + 55px);
+  }
+
+  .products-stack .shop-all {
+    margin-top: 70px;
+  }
+}
+
+/*-----------------------
     You may also like
 -----------------------*/
 .you-may-also-like {
   padding: 95px 0 110px 0;
   background: var(--light-blue) url("../images/items-bckg.png") no-repeat center
-  top / cover;
+    top / cover;
 }
 
 .you-may-also-like h3 {
@@ -1830,7 +2516,8 @@ p {
 .popular-by-age {
   padding: 75px 0 135px 0;
   background-color: var(--yellow);
-  background-image: url("../images/popular-by-age/markers.png"), url("../images/popular-by-age/overlay.png");
+  background-image: url("../images/popular-by-age/markers.png"),
+    url("../images/popular-by-age/overlay.png");
   background-repeat: no-repeat, no-repeat;
   background-size: auto auto, cover;
   background-position: bottom center, center center;
@@ -1850,7 +2537,7 @@ p {
 .age-products .product {
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
   transition: transform 400ms ease;
@@ -1921,7 +2608,7 @@ p {
   margin: 0 8px;
   border-radius: 16px;
   box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.04),
-  4px 4px 16px 0px rgba(0, 0, 0, 0.04);
+    4px 4px 16px 0px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
 
@@ -2067,8 +2754,7 @@ p {
 .our-story {
   padding: 100px 0 320px 0;
   background-color: var(--light-blue);
-  background-image:
-          url("../images/our-story/bckg-sm.jpg");
+  background-image: url("../images/our-story/bckg-sm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2293,7 +2979,7 @@ p {
   display: block !important;
 }
 
-.filter-list .filter-item:nth-child(n+3) {
+.filter-list .filter-item:nth-child(n + 3) {
   display: none;
 }
 
@@ -2302,11 +2988,11 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .filter-list .filter-item:nth-child(n+3) {
+  .filter-list .filter-item:nth-child(n + 3) {
     display: block;
   }
 
-  .filter-list .filter-item:nth-child(n+4) {
+  .filter-list .filter-item:nth-child(n + 4) {
     display: none;
   }
 }
@@ -2316,12 +3002,11 @@ p {
     grid-template-columns: repeat(5, 1fr);
   }
 
-
-  .filter-list .filter-item:nth-child(n+3) {
+  .filter-list .filter-item:nth-child(n + 3) {
     display: block;
   }
 
-  .filter-list .filter-item:nth-child(n+6) {
+  .filter-list .filter-item:nth-child(n + 6) {
     display: none;
   }
 }
@@ -2492,7 +3177,7 @@ p {
 .product-videos {
   padding: 100px 0 180px 0;
   background: var(--yellow) url("../images/products/bckg.png") no-repeat center
-  center / auto;
+    center / auto;
   text-align: center;
 }
 
@@ -2789,6 +3474,185 @@ p {
 }
 
 /*-----------------------
+    Meet our artists
+-----------------------*/
+.meet-our-artists {
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-image: url("../images/artists/shadow-04.png"),
+    url("../images/artists/shadow-03.png"),
+    radial-gradient(50% 62.5% at 50% 50%, #c30000 34.5%, #000 100%);
+  background-size: 150px auto, 150px auto, cover;
+  background-position: left top, right bottom, center center;
+  background-blend-mode: soft-light;
+  text-align: center;
+  position: relative;
+}
+
+.meet-our-artists h3 {
+  color: var(--white);
+  margin-bottom: 50px;
+}
+
+.meet-our-artists .artists-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 60px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.artist a {
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.artist h6 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--white);
+  margin: 0;
+}
+
+.artist .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  max-width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.artist .img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: url("../images/icons/white-plus.svg") no-repeat center center
+    rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.artist a:hover .img-wrapper::after {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.artist .img-wrapper img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.artist .position {
+  display: none;
+  font-weight: 900;
+  color: var(--green);
+  margin: 10px 0 20px 0;
+}
+
+.artist .description {
+  display: none;
+  color: var(--charcoal);
+}
+
+.artist .description p + p {
+  margin-top: 20px;
+}
+
+.artists-dialog {
+  background-color: white;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.artists-dialog .artist h6 {
+  color: var(--charcoal);
+}
+
+.artists-dialog .artist a {
+  pointer-events: none;
+}
+
+.artists-dialog .artist .position {
+  display: block;
+}
+
+.artists-dialog .artist .description {
+  text-align: left;
+  display: block;
+}
+
+.artists-dialog .artist .img-wrapper::after {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .meet-our-artists .artists-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .artist h6 {
+    font-size: 1.625rem;
+  }
+
+  .meet-our-artists .artists-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .artists-dialog {
+    padding: 50px 36px 36px 36px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .meet-our-artists {
+    background-size: 600px 622px, 599px 727px, cover;
+  }
+
+  .meet-our-artists .artists-list {
+    gap: 60px 110px;
+  }
+}
+
+/*-----------------------
+    Roseart Instagram Puzzles
+-----------------------*/
+.roseart-instagram-puzzles {
+  padding: 60px 0;
+  background-color: var(--black);
+}
+
+.roseart-instagram-puzzles h3 {
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1025px) {
+  .roseart-instagram-puzzles {
+    padding: 100px 0;
+  }
+}
+
+/*-----------------------
     Product Instant Shop
 -----------------------*/
 .instant-shop .product {
@@ -2816,9 +3680,9 @@ p {
   background: var(--white);
   border-radius: 2px;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.1),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.09),
-  199px 195px 167px 0px rgba(0, 0, 0, 0.05),
-  354px 346px 198px 0px rgba(0, 0, 0, 0.01);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.09),
+    199px 195px 167px 0px rgba(0, 0, 0, 0.05),
+    354px 346px 198px 0px rgba(0, 0, 0, 0.01);
   font-size: 1rem;
   font-weight: 70;
   line-height: 1.42;
@@ -2964,13 +3828,13 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-  border-color 300ms ease;
+    border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.08),
-  44px 44px 64px 0px rgba(0, 0, 0, 0.04);
+    44px 44px 64px 0px rgba(0, 0, 0, 0.04);
 }
 
 .action-button.primary {
@@ -3018,6 +3882,18 @@ p {
 .action-button.quaternary:active {
   background-color: var(--green);
   color: var(--white);
+}
+
+.action-button.quinary {
+  background: var(--orange);
+  color: var(--white);
+  border: 1px solid var(--orange);
+}
+
+.action-button.quinary:hover,
+.action-button.quinary:active {
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .action-button.full-width {
@@ -3081,7 +3957,7 @@ p {
   padding: 16px 40px 16px 16px;
   background-color: var(--white);
   box-shadow: 22px 22px 68px 0px rgba(0, 0, 0, 0.04),
-  88px 87px 124px 0px rgba(0, 0, 0, 0.04);
+    88px 87px 124px 0px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
   gap: 16px;
   width: 100%;
@@ -3109,8 +3985,8 @@ p {
 }
 
 .quick-buy .product-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
 }
 
@@ -3131,6 +4007,7 @@ p {
 
 .quick-buy .product-info h5 {
   font-weight: 700;
+  font-size: 0.875rem;
 }
 
 .quick-buy .product-info .price {
@@ -3174,6 +4051,15 @@ p {
 
   .compact-dots li {
     width: 60px;
+  }
+
+  .quick-buy .product-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .quick-buy .product-info h5 {
+    font-size: 1rem;
   }
 }
 
@@ -3270,7 +4156,7 @@ p {
 }
 
 .general-content-wrapper
-:is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
+  :is(input[type="text"], input[type="email"], input[type="tel"], textarea) {
   display: block;
   width: 100%;
   padding: 0.75rem;
@@ -3285,7 +4171,12 @@ p {
 }
 
 .general-content-wrapper
-:is(input[type="text"], input[type="email"], input[type="tel"], textarea):focus {
+  :is(
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea
+  ):focus {
   background-color: #fff;
   border-color: var(--green);
   outline: 0;
@@ -3305,7 +4196,7 @@ p {
   border-radius: 64px;
   padding: 16px 32px;
   transition: color 300ms ease, background-color 300ms ease,
-  border-color 300ms ease;
+    border-color 300ms ease;
   justify-content: center;
   align-items: center;
   border: none;
@@ -3407,7 +4298,8 @@ p {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--grey);
-  background: url("../images/icons/green-arrow-right.svg") no-repeat center center / 24px auto;
+  background: url("../images/icons/green-arrow-right.svg") no-repeat center
+    center / 24px auto;
   position: absolute;
   right: 0;
   top: 50%;
@@ -3545,7 +4437,8 @@ div.search-results .entry-summary p a:last-child {
   height: 48px;
   border-radius: 50%;
   border: 1px solid var(--grey);
-  background: url('../images/icons/green-arrow-right.svg') no-repeat center center / 24px auto;
+  background: url("../images/icons/green-arrow-right.svg") no-repeat center
+    center / 24px auto;
   position: absolute;
   right: 0;
   top: 50%;
