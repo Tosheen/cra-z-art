@@ -513,8 +513,18 @@ jQuery(document).ready(function () {
 
   jQuery(".shop-puzzles .load-more button").on("click", function () {
     const $loadMore = jQuery(this).parent();
-    $loadMore.prev("div").addClass("reveal");
-    $loadMore.addClass("obscure");
+    const $button = jQuery(this);
+    let containerDiv = $loadMore.prev("div");
+
+    if (containerDiv.hasClass("reveal")) {
+      containerDiv.removeClass("reveal");
+      $button.text('View all');
+    } else {
+      containerDiv.addClass("reveal");
+      $button.text('Show less');
+    }
+    
+    // $loadMore.addClass("obscure");
   });
 
   const $artistDialog = jQuery("#artists-dialog");
