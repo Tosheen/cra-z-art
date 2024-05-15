@@ -327,7 +327,7 @@ jQuery(document).ready(function () {
       settings: {
         slidesToShow: 3,
         dots: false,
-        initialSlide: 1,
+        infinite: true,
       },
     },
     {
@@ -335,7 +335,7 @@ jQuery(document).ready(function () {
       settings: {
         slidesToShow: 4,
         dots: false,
-        initialSlide: 2,
+        infinite: true,
       },
     },
     {
@@ -343,7 +343,7 @@ jQuery(document).ready(function () {
       settings: {
         slidesToShow: 5,
         dots: false,
-        initialSlide: 3,
+        infinite: true,
       },
     },
     {
@@ -351,7 +351,7 @@ jQuery(document).ready(function () {
       settings: {
         slidesToShow: 6,
         dots: false,
-        initialSlide: 4,
+        infinite: true,
       },
     },
   ];

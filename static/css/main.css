@@ -2409,10 +2409,6 @@ p {
   margin: 0 8px;
 }
 
-.products-stack-items .product .img-wrapper {
-  aspect-ratio: 1 / 0.8;
-}
-
 .products-stack-items .product .info h6 {
   min-height: 48px;
 }
