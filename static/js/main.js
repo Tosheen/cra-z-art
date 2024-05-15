@@ -261,7 +261,11 @@ jQuery(document).ready(function () {
       arrows: true,
       dots: false,
       centerMode: true,
-      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      centerPadding: isLargeDesktopOrBigger()
+        ? getDesktopPadding()
+        : isTabletOrBigger()
+        ? "15vw"
+        : "28px",
       infinite: isTabletOrBigger() ? true : false,
     });
   }
@@ -584,6 +588,14 @@ jQuery(document).ready(function () {
 
   function isTabletOrBigger() {
     return windowWidth >= 1025;
+  }
+
+  function isLargeDesktopOrBigger() {
+    return windowWidth >= 1800;
+  }
+
+  function getDesktopPadding() {
+    return `${Math.round(windowWidth - 1000) / 2}px`;
   }
 
   jQuery(window).on("resize", function () {
