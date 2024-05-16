@@ -532,10 +532,10 @@ jQuery(document).ready(function () {
   });
 
   const $artistDialog = jQuery("#artists-dialog");
-  jQuery(".artists-list .artist a").on("click", function (event) {
+  jQuery(".artists-list .artist > a").on("click", function (event) {
     event.preventDefault();
 
-    const $artist = jQuery(this).next().clone().removeAttr("style");
+    const $artist = jQuery(this).parent().clone();
     $artistDialog.find(".info").empty().append($artist);
 
     jQuery.magnificPopup.open({

@@ -3596,7 +3596,7 @@ p {
   color: var(--charcoal);
 }
 
-.artists-dialog .artist a.the-artist-dialog {
+.artists-dialog .artist > a {
   pointer-events: none;
 }
 
@@ -3607,6 +3607,11 @@ p {
 .artists-dialog .artist .description {
   text-align: left;
   display: block;
+}
+
+.artists-dialog .artist .description a {
+  color: var(--green);
+  text-decoration: underline;
 }
 
 .artists-dialog .artist .img-wrapper::after {
