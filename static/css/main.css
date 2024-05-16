@@ -2426,6 +2426,13 @@ p {
   min-height: 72px;
 }
 
+@media screen and (min-width: 768px) {
+  .puzzle-best-sellers .product .info h6,
+  .puzzle-new-releases .product .info h6 {
+    min-height: 96px;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .products-stack-items .compact-dots {
     display: none;
@@ -2446,6 +2453,13 @@ p {
 
   .products-stack .shop-all {
     margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .puzzle-best-sellers .product .info h6,
+  .puzzle-new-releases .product .info h6 {
+    min-height: 72px;
   }
 }
 

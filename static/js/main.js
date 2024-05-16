@@ -279,7 +279,11 @@ jQuery(document).ready(function () {
       dots: true,
       dotsClass: "compact-dots",
       centerMode: true,
-      centerPadding: isTabletOrBigger() ? "15vw" : "28px",
+      centerPadding: isLargeDesktopOrBigger()
+        ? getDesktopPadding()
+        : isTabletOrBigger()
+        ? "15vw"
+        : "28px",
       infinite: isTabletOrBigger() ? true : false,
     });
   }
@@ -323,7 +327,7 @@ jQuery(document).ready(function () {
       },
     },
     {
-      breakpoint: 800,
+      breakpoint: 768,
       settings: {
         slidesToShow: 3,
         dots: false,
@@ -331,7 +335,7 @@ jQuery(document).ready(function () {
       },
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1400,
       settings: {
         slidesToShow: 4,
         dots: false,
@@ -518,12 +522,12 @@ jQuery(document).ready(function () {
 
     if (containerDiv.hasClass("reveal")) {
       containerDiv.removeClass("reveal");
-      $button.text('View all');
+      $button.text("View all");
     } else {
       containerDiv.addClass("reveal");
-      $button.text('Show less');
+      $button.text("Show less");
     }
-    
+
     // $loadMore.addClass("obscure");
   });
 
