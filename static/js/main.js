@@ -535,7 +535,7 @@ jQuery(document).ready(function () {
   jQuery(".artists-list .artist a").on("click", function (event) {
     event.preventDefault();
 
-    const $artist = jQuery(this).parent().clone();
+    const $artist = jQuery(this).next().clone().removeAttr("style");
     $artistDialog.find(".info").empty().append($artist);
 
     jQuery.magnificPopup.open({

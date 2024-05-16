@@ -3596,7 +3596,7 @@ p {
   color: var(--charcoal);
 }
 
-.artists-dialog .artist a {
+.artists-dialog .artist a.the-artist-dialog {
   pointer-events: none;
 }
 
