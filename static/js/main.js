@@ -532,7 +532,7 @@ jQuery(document).ready(function () {
   });
 
   const $artistDialog = jQuery("#artists-dialog");
-  jQuery(".artists-list .artist > a").on("click", function (event) {
+  jQuery(".artists-list .artist > .about").on("click", function (event) {
     event.preventDefault();
 
     const $artist = jQuery(this).parent().clone();

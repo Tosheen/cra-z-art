@@ -3549,7 +3549,7 @@ p {
   transition: transform 300ms ease, opacity 300ms ease;
 }
 
-.artist a:hover .img-wrapper::after {
+.artist .about:hover .img-wrapper::after {
   opacity: 1;
   transform: translateY(0%);
 }
@@ -3581,6 +3581,10 @@ p {
   margin-top: 20px;
 }
 
+.artist > .about {
+  cursor: pointer;
+}
+
 .artists-dialog {
   background-color: white;
   width: 100%;
@@ -3594,10 +3598,6 @@ p {
 
 .artists-dialog .artist h6 {
   color: var(--charcoal);
-}
-
-.artists-dialog .artist > a {
-  pointer-events: none;
 }
 
 .artists-dialog .artist .position {
