@@ -471,6 +471,41 @@ jQuery(document).ready(function () {
     });
   }
 
+  const $featuredProductList = jQuery("#featured-product-list");
+
+  if ($featuredProductList.length === 1) {
+    $featuredProductList.slick({
+      infinite: false,
+      arrows: true,
+    });
+
+    $featuredProductList.on(
+      "afterChange",
+      function (event, slick, currentSlide) {
+        jQuery(".product-tabs")
+          .find("li")
+          .removeClass("active")
+          .end()
+          .find(`li:eq(${currentSlide})`)
+          .addClass("active");
+      }
+    );
+  }
+
+  jQuery(".product-tabs button").on("click", function () {
+    const $tab = jQuery(this).parent();
+    const index = $tab.index();
+
+    const $tabs = $tab.parent();
+
+    $tabs.find("li").not($tab).removeClass("active");
+    $tab.addClass("active");
+
+    if ($featuredProductList.length === 1) {
+      $featuredProductList.slick("slickGoTo", index);
+    }
+  });
+
   jQuery(".filter-option button").on("click", function () {
     const $filter = jQuery(this);
     const filterCategory = $filter.data("option");
@@ -527,8 +562,6 @@ jQuery(document).ready(function () {
       containerDiv.addClass("reveal");
       $button.text("Show less");
     }
-
-    // $loadMore.addClass("obscure");
   });
 
   const $artistDialog = jQuery("#artists-dialog");

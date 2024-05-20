@@ -1651,7 +1651,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 22px;
+  margin-bottom: 80px;
 }
 
 .featured-brand .product-tabs button {
@@ -1685,14 +1685,24 @@ p {
 
 .featured-brand .list-items .item {
   position: relative;
-  background-color: var(--white);
-  border-radius: 16px;
-  overflow: hidden;
+  
 }
 
 .featured-brand .list-items .item a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 20px 20px 35px 20px;
+  background-color: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 300ms ease, transform 300ms ease;
+  height: 100%;
+}
+
+.featured-brand .list-items .item a:hover {
+  border-color: var(--green);
+  transform: scale(0.98);
 }
 
 .featured-brand .list-items .img-wrapper {
@@ -1713,11 +1723,12 @@ p {
 }
 
 .featured-brand .list-items .item h6 {
+  flex-grow: 1;
   color: var(--charcoal);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 8;
+  margin-bottom: 8px;
 }
 
 .featured-brand .list-items .item .price {
@@ -1727,6 +1738,20 @@ p {
   font-weight: 700;
   line-height: 1.5;
   color: var(--green);
+}
+
+.featured-brand .slick-arrow {
+  position: absolute;
+  top: -50px;
+  transform: none;
+}
+
+.featured-brand .slick-prev {
+  left: 0;
+}
+
+.featured-brand .slick-next {
+  right: 0;
 }
 
 @media screen and (min-width: 580px) {
@@ -1745,7 +1770,6 @@ p {
   .featured-brand .product-tabs li {
     margin-bottom: -2px;
   }
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -1761,11 +1785,31 @@ p {
   }
 
   .featured-brand .outlined-products {
+    width: 656px;
+    max-width: 656px;
     flex: 0 0 656px;
   }
 
   .featured-brand .info {
     flex: 1 1 auto;
+  }
+
+  .featured-brand .product-tabs {
+    width: fit-content;
+    margin-bottom: 22px;
+  }
+
+  .featured-brand .slick-arrow {
+    top: -70px;
+  }
+  
+  .featured-brand .slick-prev {
+    left: auto;
+    right: 62px;
+  }
+  
+  .featured-brand .slick-next {
+    right: 0;
   }
 }
 
