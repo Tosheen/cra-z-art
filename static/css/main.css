@@ -1754,13 +1754,8 @@ p {
   right: 0;
 }
 
-@media screen and (min-width: 580px) {
-  .featured-brand .list-items {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .featured-brand .product-tabs {
     flex-direction: row;
     position: relative;
@@ -1769,6 +1764,12 @@ p {
 
   .featured-brand .product-tabs li {
     margin-bottom: -2px;
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .featured-brand .list-items {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
