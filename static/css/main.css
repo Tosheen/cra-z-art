@@ -1366,6 +1366,20 @@ p {
     var(--black);
 }
 
+.puzzles-banner .container > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.puzzles-banner .container .hands {
+  margin: 0 auto;
+}
+
+.puzzles-banner .container .brand-logo {
+  margin: 0 auto 30px auto;
+}
+
 .puzzles-banner h2 {
   margin-bottom: 24px;
 }
@@ -1389,10 +1403,6 @@ p {
 
 .puzzles-banner .slick-next {
   right: 20px;
-}
-
-.puzzle-products {
-  margin-top: 65px;
 }
 
 .puzzle-products .product a {
@@ -1443,6 +1453,10 @@ p {
 }
 
 @media screen and (min-width: 1025px) {
+  .puzzle-products {
+    margin-top: 65px;
+  }
+
   .puzzles-banner {
     padding: 60px 0 120px 0;
   }
@@ -1451,15 +1465,62 @@ p {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .puzzles-banner .container .hands {
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    max-width: 150px;
+  }
+
+  .puzzles-banner .container .brand-logo {
+    position: absolute;
+    top: 80%;
+    left: 15px;
+    transform: translateY(-50%);
+    max-width: 100px;
+  }
+
+  .puzzles-banner .container {
+    position: relative;
+  }
 }
 
 @media screen and (min-width: 1400px) {
+  .puzzles-banner {
+    position: relative;
+  }
+
   .puzzles-banner .slick-prev {
     left: 56px;
   }
 
   .puzzles-banner .slick-next {
     right: 56px;
+  }
+
+  .puzzles-banner .container {
+    position: static;
+  }
+
+  .puzzles-banner .container .hands {
+    bottom: auto;
+    right: 2%;
+    top: 110px;
+    margin: 0;
+  }
+
+  .puzzles-banner .container .brand-logo {
+    top: 150px;
+    left: 74px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .puzzles-banner .container .hands {
+    max-width: 100%;
+    top: 30px;
   }
 }
 
